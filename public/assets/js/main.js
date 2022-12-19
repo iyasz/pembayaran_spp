@@ -2,6 +2,7 @@ $(document).ready(function () {
   $("table").DataTable();
 });
 
+
 // if ($toast == 1) {
 //   iziToast.show({
 //     title: "error",

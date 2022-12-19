@@ -4,7 +4,7 @@
 :root {
   --header-height: 3rem;
   --nav-width: 68px;
-  --bg-primary: #f6f9fb;
+  --bg-primary: #f1f5f9;
   --first-color: #4723d9;
   --first-color-light: #afa5d9;
   --icon-color: #c0e1f7;
@@ -214,11 +214,55 @@ a {
 
 /* End Navbar  */
 
-.input-group-text{
+/* .input-group-text{
   background-color: transparent !important;
   border: 0 !important;
 }
 
 .form-control:disabled {
   background-color: transparent !important;
+} */
+
+/* content  */
+
+.table {
+  overflow-x: hidden;
 }
+
+.form-control:focus, .form-select:focus {
+  box-shadow: none;
+}
+
+.form-control-sm {
+  border-radius: 9999px;
+}
+
+.paginate_button a{
+  font-size: 14px !important;
+}
+
+.page-item.active {
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 40px !important;
+}
+
+.table>tbody {
+  background-color: #fff;
+  border-radius: 9999px;
+  color: #64748b;
+}
+
+.dataTables_wrapper>row{
+  background-color: red ;
+}
+
+.paginate_button.page-item.active::before {
+  display: none;
+}
+
+.table thead tr th {
+  color: #64748b;
+}
+
+/* end content */
