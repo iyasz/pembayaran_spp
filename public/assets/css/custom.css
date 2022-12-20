@@ -5,6 +5,7 @@
   --header-height: 3rem;
   --nav-width: 68px;
   --bg-primary: #f1f5f9;
+  --gray-primary: #64748b;
   --first-color: #4723d9;
   --first-color-light: #afa5d9;
   --icon-color: #c0e1f7;
@@ -250,7 +251,7 @@ a {
 .table>tbody {
   background-color: #fff;
   border-radius: 9999px;
-  color: #64748b;
+  color: var(--gray-primary);
 }
 
 .dataTables_wrapper>row{
@@ -262,7 +263,55 @@ a {
 }
 
 .table thead tr th {
-  color: #64748b;
+  color: var(--gray-primary);
 }
+
+.label-input, hr {
+  color: var(--gray-primary);
+}
+
+.text-gray {
+  color: var(--gray-primary) !important;
+}
+
+.card {
+  border: none;
+  box-shadow: -1px 2px 24px -17px rgba(0,0,0,0.39);
+-webkit-box-shadow: -1px 2px 24px -17px rgba(0,0,0,0.39);
+-moz-box-shadow: -1px 2px 24px -17px rgba(0,0,0,0.39);
+}
+
+.btn-cancel {
+  color: var(--gray-primary);
+  background: none;
+  font-weight: 700;
+  border: none;
+}
+
+.btn-cancel:hover{
+  color: var(--gray-primary);
+  background: none;
+}
+
+.btn-cancel:active{
+  background: none !important;
+  color: var(--gray-primary) !important;
+}
+
+.btn-add {
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.dataTables_wrapper.dt-bootstrap5.no-footer .row:nth-child(1) {
+  background: #fff !important;
+  padding: 20px 0px !important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* #table tbody tr td {
+  padding: 14px 12px !important;
+} */
 
 /* end content */

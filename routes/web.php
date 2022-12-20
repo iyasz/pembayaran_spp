@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,19 +18,23 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('admin/', function(){
-    return view('admin.admin');
-});
+// admin route 
 
-Route::get('admin/create', function(){
-    return view('admin.createadmin');
-});
+Route::get('admin/',[adminController::class, 'view'] );
 
+Route::get('admin/create',[adminController::class, 'index']);
 
+Route::get('admin/detail',[adminController::class, 'detail']);
+
+// end admin 
+
+// siswa route 
 
 Route::get('siswa/', function(){
     return view('siswa.siswa');
 });
+
+// end siswa 
 
 Route::get('kelas/', function(){
     return view('kelas.kelas');
