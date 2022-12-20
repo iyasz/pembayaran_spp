@@ -8,12 +8,13 @@ use Illuminate\Http\Request;
 class adminController extends Controller
 {
     function index(){
-        return view('admin.createadmin', ['admin' => 12]);  
+        $admin = admin::all();
+        return view('admin.admin', ['admin' => $admin]);  
     }
 
-    function view(){
+    function create(){
         $admin = admin::all();
-        return view('admin.admin', ['admin' => $admin]);
+        return view('admin.createadmin', ['admin' => $admin]);
     }
 
     function detail(){
@@ -21,5 +22,8 @@ class adminController extends Controller
         return view('admin.detailadmin', ['admin' => $admin]);
     }
 
-    
+    function store(){
+        return redirect('/admin');
+    }
+
 }

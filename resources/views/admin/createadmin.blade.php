@@ -8,7 +8,8 @@
 <div class="row">
     <div class="col-12">
         <div class="h-100 main">
-            <form action="" method="post">
+            <form action="/admin/store" method="POST">
+                @csrf
                 <h4 class="mb-4">Create Admin Room's</h4>
                 <div class="card">
                     <div class="card-body">
@@ -92,9 +93,9 @@
                 </div>
                 <div class="mt-4 mb-5 text-end">
                     <a href="/admin" class="btn btn-primary me-3 btn-cancel d-lg-inline d-md-inline d-none">Batal</a>
-                    <button class="btn btn-primary btn-add d-lg-inline d-md-inline d-none">Buat Admin</button>
+                    <button type="submit" name="addAdmin" class="btn btn-primary btn-add d-lg-inline d-md-inline d-none">Buat Admin</button>
 
-                    <button class="btn btn-primary btn-add w-100 d-lg-none d-md-none d-block mb-2">Buat Admin</button>
+                    <button type="submit" name="addAdmin" class="btn btn-primary btn-add w-100 d-lg-none d-md-none d-block mb-2">Buat Admin</button>
                     <a href="/admin" class="btn btn-primary w-100 btn-cancel d-lg-none d-md-none d-block">Batal</a>
                 </div>
             </form>

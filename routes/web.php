@@ -20,11 +20,13 @@ Route::get('/', function () {
 
 // admin route 
 
-Route::get('admin/',[adminController::class, 'view'] );
+Route::get('/admin',[adminController::class, 'index'] );
 
-Route::get('admin/create',[adminController::class, 'index']);
+Route::get('/admin/create',[adminController::class, 'create']);
 
-Route::get('admin/detail',[adminController::class, 'detail']);
+Route::get('/admin/detail',[adminController::class, 'detail']);
+
+Route::post('/admin/store',[adminController::class, 'store']);
 
 // end admin 
 
