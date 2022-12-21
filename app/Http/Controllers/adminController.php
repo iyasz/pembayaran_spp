@@ -22,7 +22,8 @@ class adminController extends Controller
         return view('admin.detailadmin', ['admin' => $admin]);
     }
 
-    function store(){
+    function store(Request $request){
+        admin::create($request->except('_token', 'addAdmin'));
         return redirect('/admin');
     }
 

@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class admin extends Model
 {
     use HasFactory;
+
+    // protected $fillable = [];
+    protected $guarded = [];
 }
