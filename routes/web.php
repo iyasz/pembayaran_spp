@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\jurusanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,8 +47,13 @@ Route::get('transaksi/', function(){
     return view('transaksi.transaksi');
 });
 
-Route::get('jurusan/', function(){
-    return view('jurusan.jurusan');
-});
+// Jurusan Route 
 
+Route::get('/jurusan', [jurusanController::class, 'index']);
+
+Route::get('/jurusan/create', [jurusanController::class, 'create']);
+
+Route::post('/jurusan/store', [jurusanController::class, 'store']);
+
+// End Jurusan 
 

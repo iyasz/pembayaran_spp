@@ -22,7 +22,7 @@
                             <th>Nama</th>
                             <th>Password</th>
                             <th>No Telp</th>
-                            <th class="text-center"></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
