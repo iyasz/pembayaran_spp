@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.12.1/datatables.min.css" />
 
     <!-- css style  -->
-    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
     
 
 </head>
@@ -34,7 +34,7 @@
 <body id="body-pd">
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="header_img"> <img src="" alt=""> </div>
+        <div class="header_img">  </div>
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">

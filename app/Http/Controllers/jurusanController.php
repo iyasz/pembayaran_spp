@@ -21,4 +21,15 @@ class jurusanController extends Controller
         jurusan::create($request->except('_token','addJurusan'));
         return redirect('/jurusan');
     }
+
+    function updateview($id){
+        $find = jurusan::find($id);
+        return view('jurusan.updatejurusan', ['find' => $find]);
+    }
+
+    function update($id, Request $request){
+        $find = jurusan::find($id);
+        $find->update($request->except('_token','addJurusan'));
+        return redirect('/jurusan');
+    }
 }

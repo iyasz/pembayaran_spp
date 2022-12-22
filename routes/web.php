@@ -29,6 +29,10 @@ Route::get('/admin/detail',[adminController::class, 'detail']);
 
 Route::post('/admin/store',[adminController::class, 'store']);
 
+Route::get('/admin/{id}/update',[adminController::class, 'updateview']);
+
+Route::put('/admin/{id}',[adminController::class, 'update']);
+
 // end admin 
 
 // siswa route 
@@ -53,7 +57,11 @@ Route::get('/jurusan', [jurusanController::class, 'index']);
 
 Route::get('/jurusan/create', [jurusanController::class, 'create']);
 
+Route::get('/jurusan/{id}/edit', [jurusanController::class, 'updateview']);
+
 Route::post('/jurusan/store', [jurusanController::class, 'store']);
+
+Route::put('/jurusan/{id}', [jurusanController::class, 'update']);
 
 // End Jurusan 
 
