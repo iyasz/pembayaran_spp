@@ -31,7 +31,11 @@
                                 <td class="d-flex">
                                     <a href="/kelas/detail/{{ $data->id }}"><i class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
                                     <a href="/kelas/{{$data->id}}/edit"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
-                                    <button class="border-0 bg-transparent" type="submit"><i class='bx bx-trash fs-5 mx-1 text-gray'></i></button>
+                                    <form action="/kelas/{{$data->id}}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="border-0 bg-transparent" type="submit"><i class='bx bx-trash fs-5 mx-1 text-gray'></i></button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

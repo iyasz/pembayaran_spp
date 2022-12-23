@@ -58,6 +58,8 @@ Route::get('/kelas/{id}/edit', [kelasController::class, 'updateview']);
 
 Route::put('/kelas/{id}', [kelasController::class, 'update']);
 
+Route::delete('/kelas/{id}', [kelasController::class, 'destroy']);
+
 // End kelas 
 
 

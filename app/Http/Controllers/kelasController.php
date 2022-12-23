@@ -36,4 +36,11 @@ class kelasController extends Controller
         $kelas->update($request->except('_token','addClass'));
         return redirect('/kelas');
     }
+
+    public function destroy($id)
+    {
+        $kelas = kelas::find($id);
+        $kelas->delete();
+        return redirect('/kelas');
+    }
 }
