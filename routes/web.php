@@ -60,6 +60,8 @@ Route::put('/kelas/{id}', [kelasController::class, 'update']);
 
 Route::delete('/kelas/{id}', [kelasController::class, 'destroy']);
 
+Route::get('/kelas/detail/{id}', [kelasController::class, 'detail']);
+
 // End kelas 
 
 

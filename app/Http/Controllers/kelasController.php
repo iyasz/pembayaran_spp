@@ -43,4 +43,10 @@ class kelasController extends Controller
         $kelas->delete();
         return redirect('/kelas');
     }
+
+    public function detail($id)
+    {
+        $kelas = kelas::find($id);
+        return view('kelas.detailkelas', ['kelas' => $kelas]);
+    }
 }
