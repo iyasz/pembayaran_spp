@@ -25,13 +25,15 @@ Route::get('/admin',[adminController::class, 'index'] );
 
 Route::get('/admin/create',[adminController::class, 'create']);
 
-Route::get('/admin/detail',[adminController::class, 'detail']);
+Route::get('/admin/detail/{id}',[adminController::class, 'detail']);
 
 Route::post('/admin/store',[adminController::class, 'store']);
 
 Route::get('/admin/{id}/update',[adminController::class, 'updateview']);
 
 Route::put('/admin/{id}',[adminController::class, 'update']);
+
+Route::delete('/admin/{id}',[adminController::class, 'destroy']);
 
 // end admin 
 

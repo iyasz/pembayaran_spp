@@ -13,12 +13,11 @@ class adminController extends Controller
     }
 
     function create(){
-        $admin = admin::all();
-        return view('admin.createadmin', ['admin' => $admin]);
+        return view('admin.createadmin');
     }
 
-    function detail(){
-        $admin = admin::all();
+    function detail($id){
+        $admin = admin::find($id);
         return view('admin.detailadmin', ['admin' => $admin]);
     }
 
@@ -35,6 +34,12 @@ class adminController extends Controller
     function update($id, Request $request){
         $admin = admin::find($id);
         $admin->update($request->except('_token', 'addAdmin'));
+        return redirect('/admin');
+    }
+
+    function destroy($id){
+        $admin = admin::find($id);
+        $admin->delete();
         return redirect('/admin');
     }
 

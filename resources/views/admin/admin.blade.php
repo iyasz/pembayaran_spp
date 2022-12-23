@@ -11,7 +11,7 @@
                 <div class="row">
                     <h4 class="mb-5">Admin Room's</h4>
                     <div class="col-12 text-end">
-                        <a href="admin/create" class="btn btn-primary btn-add mb-3 "><i class='bx bx-plus'></i> Add Admin</a>
+                        <a href="/admin/create" class="btn btn-primary btn-add mb-3 "><i class='bx bx-plus'></i> Add Admin</a>
                     </div>
                 </div>
 
@@ -32,10 +32,14 @@
                                 <td>{{ $data->name }}</td>
                                 <td>{{ $data->password }}</td>
                                 <td>{{ $data->telp }}</td>
-                                <td>
+                                <td class="d-flex">
                                     <a href="/admin/detail/{{ $data->id }}"><i class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
                                     <a href="/admin/{{$data->id}}/update"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
-                                    <a href=""><i class='bx bx-trash fs-5 mx-1 text-gray'></i></a>
+                                    <form action="/admin/{{$data->id}}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" value="delete" class="border-0 bg-transparent "><i class='bx bx-trash fs-5 mx-1 text-gray'></i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
