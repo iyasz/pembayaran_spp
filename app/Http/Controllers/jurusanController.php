@@ -32,4 +32,15 @@ class jurusanController extends Controller
         $find->update($request->except('_token','addJurusan'));
         return redirect('/jurusan');
     }
+
+    function destroy($id){
+        $find = jurusan::find($id);
+        $find->delete();
+        return redirect('/jurusan');
+    }
+
+    function detail($id){
+        $find = jurusan::find($id);
+        return view('jurusan.detailjurusan', ['jurusan' => $find]);
+    }
 }

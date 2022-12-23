@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\jurusanController;
+use App\Http\Controllers\kelasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,17 +40,24 @@ Route::delete('/admin/{id}',[adminController::class, 'destroy']);
 
 // siswa route 
 
-Route::get('siswa/', function(){
+Route::get('/siswa', function(){
     return view('siswa.siswa');
 });
 
 // end siswa 
 
-Route::get('kelas/', function(){
-    return view('kelas.kelas');
-});
+// Route kelas 
 
-Route::get('transaksi/', function(){
+Route::get('/kelas', [kelasController::class, 'index']);
+
+Route::get('/kelas/create', [kelasController::class, 'createview']);
+
+Route::post('/kelas/store', [kelasController::class, 'store']);
+
+// End kelas 
+
+
+Route::get('/transaksi', function(){
     return view('transaksi.transaksi');
 });
 
@@ -64,6 +72,10 @@ Route::get('/jurusan/{id}/edit', [jurusanController::class, 'updateview']);
 Route::post('/jurusan/store', [jurusanController::class, 'store']);
 
 Route::put('/jurusan/{id}', [jurusanController::class, 'update']);
+
+Route::delete('/jurusan/{id}', [jurusanController::class, 'destroy']);
+
+Route::get('/jurusan/detail/{id}', [jurusanController::class, 'detail']);
 
 // End Jurusan 
 

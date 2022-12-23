@@ -29,10 +29,14 @@
 
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $data->name }}</td>
-                                <td>
+                                <td class="d-flex">
                                     <a href="/jurusan/detail/{{ $data->id }}"><i class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
                                     <a href="/jurusan/{{$data->id}}/edit"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
-                                    <a href=""><i class='bx bx-trash fs-5 mx-1 text-gray'></i></a>
+                                    <form action="/jurusan/{{$data->id}}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="border-0 bg-transparent" type="submit"><i class='bx bx-trash fs-5 mx-1 text-gray'></i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

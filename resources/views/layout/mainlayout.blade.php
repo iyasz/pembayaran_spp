@@ -44,7 +44,7 @@
                     <a href="/admin" class="nav_link @yield('adm')"> <i class='bx bx-user nav_icon @yield('icadm')'></i> <span class="nav_name">Admin</span>
                     </a> <a href="/siswa" class="nav_link @yield('swa')"><i class='bx bx-user-pin nav_icon @yield('icswa')'></i> <span class="nav_name">Siswa</span> </a>
                     <a href="/transaksi" class="nav_link"> <i class='bx bx-credit-card-front nav_icon'></i> <span class="nav_name">Transaksi</span>
-                    </a> <a href="/kelas" class="nav_link"> <i class='bx bx-home-alt nav_icon'></i> <span class="nav_name">Kelas</span> </a>
+                    </a> <a href="/kelas" class="nav_link @yield('kls')"> <i class='bx bx-home-alt nav_icon @yield('ickls')'></i> <span class="nav_name">Kelas</span> </a>
                     </a> <a href="/jurusan" class="nav_link @yield('jrs')"> <i class='bx bx-code-curly nav_icon @yield('icjrs')'></i> <span class="nav_name">Jurusan</span> </a>
                 </div>
             </div>
@@ -74,7 +74,7 @@
     <!-- datatables -->
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.12.1/datatables.min.js"></script>
 
-    <script src="../assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>
