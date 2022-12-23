@@ -54,6 +54,10 @@ Route::get('/kelas/create', [kelasController::class, 'createview']);
 
 Route::post('/kelas/store', [kelasController::class, 'store']);
 
+Route::get('/kelas/{id}/edit', [kelasController::class, 'updateview']);
+
+Route::put('/kelas/{id}', [kelasController::class, 'update']);
+
 // End kelas 
 
 

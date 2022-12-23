@@ -23,4 +23,17 @@ class kelasController extends Controller
         kelas::create($request->except('_token','addClass'));
         return redirect('/kelas');
     }
+
+    public function updateview($id)
+    {
+        $kelas = kelas::find($id);
+        return view('kelas.updatekelas', ['kelas' => $kelas]);
+    }
+
+    public function update($id, Request $request)
+    {
+        $kelas = kelas::find($id);
+        $kelas->update($request->except('_token','addClass'));
+        return redirect('/kelas');
+    }
 }
