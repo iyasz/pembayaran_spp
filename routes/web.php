@@ -3,6 +3,7 @@
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\jurusanController;
 use App\Http\Controllers\kelasController;
+use App\Http\Controllers\siswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,9 +41,13 @@ Route::delete('/admin/{id}',[adminController::class, 'destroy']);
 
 // siswa route 
 
-Route::get('/siswa', function(){
-    return view('siswa.siswa');
-});
+Route::get('/siswa',[siswaController::class, 'index']);
+
+Route::get('/siswa/create',[siswaController::class, 'create']);
+
+Route::post('/siswa/store',[siswaController::class, 'store']);
+
+Route::delete('/siswa/{id}',[siswaController::class, 'destroy']);
 
 // end siswa 
 
@@ -60,7 +65,7 @@ Route::put('/kelas/{id}', [kelasController::class, 'update']);
 
 Route::delete('/kelas/{id}', [kelasController::class, 'destroy']);
 
-Route::get('/kelas/detail/{id}', [kelasController::class, 'detail']);
+Route::get('/kelas/detail/{id}', [kelasController::class, 'detail`']);
 
 // End kelas 
 
