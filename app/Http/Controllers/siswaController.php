@@ -36,4 +36,20 @@ class siswaController extends Controller
         $find->delete();
         return redirect('/siswa');
     }
+
+    public function updateview($id)
+    {
+        $siswa = siswa::find($id);
+        $kelas = kelas::all();
+        $jurusan = jurusan::all();
+        return view('siswa.updatesiswa',['siswa' => $siswa, 'kelas' => $kelas, 'jurusan' => $jurusan]);
+    }
+
+    public function update($id, Request $request)
+    {
+        $find = siswa::find($id);
+        $find->update($request->except('_token','updateStudent'));
+        return redirect('/siswa');
+    }
+
 }

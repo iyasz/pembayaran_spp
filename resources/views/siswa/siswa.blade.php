@@ -33,8 +33,8 @@
                             <td>{{ $data->kelas_id }}</td>
                             <td>{{ $data->jurusan_id }}</td>
                             <td class="d-flex">
-                                <a href="/admin/detail/{{ $data->id }}"><i class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
-                                <a href="/admin/{{$data->id}}/update"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
+                                <a href="/siswa/detail/{{ $data->id }}"><i class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
+                                <a href="/siswa/update/{{$data->id}}"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
                                 <form action="/siswa/{{$data->id}}" method="post">
                                     @csrf
                                     @method('delete')
