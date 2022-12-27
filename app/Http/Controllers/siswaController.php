@@ -52,4 +52,10 @@ class siswaController extends Controller
         return redirect('/siswa');
     }
 
+    public function detail($id)
+    {
+        $find = siswa::find($id);
+        return view('siswa.detailsiswa', ['siswa' => $find]);
+    }
+
 }

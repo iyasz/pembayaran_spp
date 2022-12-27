@@ -47,7 +47,9 @@ Route::get('/siswa/create',[siswaController::class, 'create']);
 
 Route::get('/siswa/update/{id}',[siswaController::class, 'updateview']);
 
-Route::put('/siswa/{id}',[siswaController::class, 'update']);
+Route::put('/siswa/{id}',[siswaController::class, 'updateview']);
+
+Route::get('/siswa/detail/{id}',[siswaController::class, 'detail']);
 
 Route::post('/siswa/store',[siswaController::class, 'store']);
 
@@ -69,7 +71,7 @@ Route::put('/kelas/{id}', [kelasController::class, 'update']);
 
 Route::delete('/kelas/{id}', [kelasController::class, 'destroy']);
 
-Route::get('/kelas/detail/{id}', [kelasController::class, 'detail`']);
+Route::get('/kelas/detail/{id}', [kelasController::class, 'detail']);
 
 // End kelas 
 
