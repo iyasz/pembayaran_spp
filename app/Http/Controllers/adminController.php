@@ -23,7 +23,7 @@ class adminController extends Controller
 
     function store(Request $request){
         admin::create($request->except('_token', 'addAdmin'));
-        return redirect('/admin');
+        return redirect('/admin')->with('createSuccess', 'Data');
     }
 
     function updateview($id){
@@ -34,13 +34,13 @@ class adminController extends Controller
     function update($id, Request $request){
         $admin = admin::find($id);
         $admin->update($request->except('_token', 'addAdmin'));
-        return redirect('/admin');
+        return redirect('/admin')->with('updateSuccess', 'data');
     }
 
     function destroy($id){
         $admin = admin::find($id);
         $admin->delete();
-        return redirect('/admin');
+        return redirect('/admin')->with('deleteSuccess', 'data');
     }
 
 }

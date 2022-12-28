@@ -10,7 +10,10 @@
             <div class="h-100 main">
                 <form action="/siswa/store" method="POST">
                     @csrf
-                    <h4 class="mb-4">Student Detail : {{$siswa->name}}</h4>
+                    <div class="d-flex">
+                        <h4 class="mb-4">Student Details : {{ $siswa->name }}</h4>
+                        <a href="/admin/" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
+                    </div>
                     <div class="card">
                         <div class="card-body">
                             <div class="row justify-content-center mt-2 ">
