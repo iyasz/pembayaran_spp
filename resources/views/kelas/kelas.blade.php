@@ -5,6 +5,47 @@
 @section('ickls', 'active-icon')
 
 @section('content')
+
+@if (SESSION('createSuccess'))
+<script>
+    iziToast.show({
+        icon: "fa-regular fa-circle-check",
+        message: "Data Berhasil Disimpan!",
+        position: "topCenter",
+        drag: false,
+        pauseOnHover: false,
+        color: "green",
+        iconUrl: null,
+        timeout: 4100,
+      });</script>
+@endif
+@if (SESSION('updateSuccess'))
+<script>
+    iziToast.show({
+        icon: "fa-regular fa-circle-check",
+        message: "Data Berhasil Diubah!",
+        position: "topCenter",
+        drag: false,
+        pauseOnHover: false,
+        color: "green",
+        iconUrl: null,
+        timeout: 4100,
+      });</script>
+@endif
+@if (SESSION('deleteSuccess'))
+<script>
+    iziToast.show({
+        icon: "fa-regular fa-circle-check",
+        message: "Data Berhasil Dihapus!",
+        position: "topCenter",
+        drag: false,
+        pauseOnHover: false,
+        color: "green",
+        iconUrl: null,
+        timeout: 4100,
+      });</script>
+@endif
+
     <div class="container">
         <div class="row">
             <div class="col-12">

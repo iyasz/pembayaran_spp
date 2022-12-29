@@ -12,7 +12,7 @@
                     @csrf
                     <div class="d-flex">
                         <h4 class="mb-4">Student Details : {{ $siswa->name }}</h4>
-                        <a href="/admin/" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
+                        <a href="/siswa/" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
                     </div>
                     <div class="card">
                         <div class="card-body">

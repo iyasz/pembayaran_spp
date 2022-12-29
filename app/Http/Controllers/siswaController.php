@@ -27,14 +27,14 @@ class siswaController extends Controller
     public function store(Request $request)
     {
         siswa::create($request->except('_token','addStudent'));
-        return redirect('/siswa');
+        return redirect('/siswa')->with('createSuccess', 'data');
     }
 
     public function destroy($id)
     {
         $find = siswa::find($id);
         $find->delete();
-        return redirect('/siswa');
+        return redirect('/siswa')->with('deleteSuccess', 'data');
     }
 
     public function updateview($id)
@@ -49,7 +49,7 @@ class siswaController extends Controller
     {
         $find = siswa::find($id);
         $find->update($request->except('_token','updateStudent'));
-        return redirect('/siswa');
+        return redirect('/siswa')->with('updateSuccess', 'data');
     }
 
     public function detail($id)

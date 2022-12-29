@@ -21,7 +21,7 @@ class kelasController extends Controller
     public function store(Request $request)
     {
         kelas::create($request->except('_token','addClass'));
-        return redirect('/kelas');
+        return redirect('/kelas')->with('createSuccess', 'data');
     }
 
     public function updateview($id)
@@ -34,14 +34,14 @@ class kelasController extends Controller
     {
         $kelas = kelas::find($id);
         $kelas->update($request->except('_token','addClass'));
-        return redirect('/kelas');
+        return redirect('/kelas')->with('updateSuccess', 'data');
     }
 
     public function destroy($id)
     {
         $kelas = kelas::find($id);
         $kelas->delete();
-        return redirect('/kelas');
+        return redirect('/kelas')->with('deleteSuccess', 'data');
     }
 
     public function detail($id)

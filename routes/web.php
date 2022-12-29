@@ -47,7 +47,7 @@ Route::get('/siswa/create',[siswaController::class, 'create']);
 
 Route::get('/siswa/update/{id}',[siswaController::class, 'updateview']);
 
-Route::put('/siswa/{id}',[siswaController::class, 'updateview']);
+Route::put('/siswa/{id}',[siswaController::class, 'update']);
 
 Route::get('/siswa/detail/{id}',[siswaController::class, 'detail']);
 

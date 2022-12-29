@@ -19,7 +19,7 @@ class jurusanController extends Controller
 
     function store(Request $request){
         jurusan::create($request->except('_token','addJurusan'));
-        return redirect('/jurusan');
+        return redirect('/jurusan')->with('createSuccess', 'data');
     }
 
     function updateview($id){
@@ -30,13 +30,13 @@ class jurusanController extends Controller
     function update($id, Request $request){
         $find = jurusan::find($id);
         $find->update($request->except('_token','addJurusan'));
-        return redirect('/jurusan');
+        return redirect('/jurusan')->with('updateSuccess', 'data');
     }
 
     function destroy($id){
         $find = jurusan::find($id);
         $find->delete();
-        return redirect('/jurusan');
+        return redirect('/jurusan')->with('deleteSuccess', 'data');
     }
 
     function detail($id){
