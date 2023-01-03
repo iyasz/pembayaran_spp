@@ -57,7 +57,7 @@
                                     <label class="mt-2 me-5 label-input">Kelas</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <label class="mt-2 me-5 label-input">{{$siswa->kelas_id}}</label>
+                                    <label class="mt-2 me-5 label-input">{{$siswa->kelas['name']}}</label>
                                 </div>
                             </div>
                             <hr class="mt-4 mb-4">
@@ -66,7 +66,7 @@
                                     <label class="mt-2 me-5 label-input">Jurusan</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <label class="mt-2 me-5 label-input">{{$siswa->jurusan_id}}</label>
+                                    <label class="mt-2 me-5 label-input">{{$siswa->jurusan['name']}}</label>
                                 </div>
                             </div>
                             <hr class="mt-4 mb-4">

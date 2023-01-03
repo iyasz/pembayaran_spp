@@ -12,9 +12,7 @@ class siswaController extends Controller
     public function index()
     {
         $siswa = siswa::all();
-        $kelas = kelas::all();
-        $jurusan = jurusan::all();
-        return view('siswa.siswa', ['siswa' => $siswa,'kelas' => $kelas, 'jurusan' => $jurusan]);
+        return view('siswa.siswa', ['siswa' => $siswa]);
     }
 
     public function create()
