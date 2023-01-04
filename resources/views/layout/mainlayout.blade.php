@@ -27,6 +27,9 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.12.1/datatables.min.css" />
 
+    {{-- swiper js  --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     {{-- izitoast --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css">
 
@@ -55,7 +58,8 @@
                     </a> <a href="/siswa" class="nav_link @yield('swa')"><i
                             class='bx bx-user-pin nav_icon @yield('icswa')'></i> <span class="nav_name">Siswa</span>
                     </a>
-                    <a href="/transaksi" class="nav_link"> <i class='bx bx-credit-card-front nav_icon'></i> <span
+                    <a href="/transaksi" class="nav_link @yield('tr')"> <i
+                            class='bx bx-credit-card-front nav_icon @yield('ictr')'></i> <span
                             class="nav_name">Transaksi</span>
                     </a> <a href="/kelas" class="nav_link @yield('kls')"> <i
                             class='bx bx-home-alt nav_icon @yield('ickls')'></i> <span class="nav_name">Kelas</span>
@@ -92,9 +96,16 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
 
+    {{-- izitoast  --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
         integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    {{-- swiper js  --}}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    {{-- chart js  --}}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- datatables -->
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.12.1/datatables.min.js"></script>

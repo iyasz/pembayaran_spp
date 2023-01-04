@@ -4,6 +4,7 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\jurusanController;
 use App\Http\Controllers\kelasController;
 use App\Http\Controllers\siswaController;
+use App\Http\Controllers\transaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -76,9 +77,11 @@ Route::get('/kelas/detail/{id}', [kelasController::class, 'detail']);
 // End kelas 
 
 
-Route::get('/transaksi', function(){
-    return view('transaksi.transaksi');
-});
+Route::get('/transaksi', [transaksiController::class, 'index']);
+
+Route::get('/transaksi/create', [transaksiController::class, 'createview']);
+
+Route::post('/transaksi/store', [transaksiController::class, 'create']);
 
 // Jurusan Route 
 
