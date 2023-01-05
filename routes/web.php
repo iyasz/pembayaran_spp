@@ -4,6 +4,7 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\jurusanController;
 use App\Http\Controllers\kelasController;
 use App\Http\Controllers\siswaController;
+use App\Http\Controllers\loginController;
 use App\Http\Controllers\transaksiController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard');
 });
+
+// auth Route 
+
+Route::get('/login', [loginController::class, 'index']);
+
+// End Auth 
 
 // admin route 
 

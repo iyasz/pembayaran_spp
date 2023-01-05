@@ -18,10 +18,10 @@
                         <div id="slide2" class="swiper-slide">Slide 2</div>                       
                     </div>
                 </div>
-                <h4 class="mb-4">Monthly Statistics</h4>
+                <h4 class="mb-4">Students Statistics</h4>
                 <div class="cotainer">
                     <div class="row justify-content-center">
-                        <div class="col-lg-9 col-md-8 col-12">
+                        <div class="col-lg-11 col-md-8 col-12">
                             <canvas id="myChart" class="rounded-3"></canvas>
                         </div>
                     </div>

@@ -20,11 +20,11 @@ const plugin = {
 new Chart(ctx, {
     type: "bar",
     data: {
-        labels: ["January", "February", "March", "April", "May", "June"],
+        labels: ["2018", "2019", "2020", "2021", "2022", "2023"],
         datasets: [
             {
                 label: "Total",
-                data: [12, 19, 3, 5, 2, 3],
+                data: [563, 497, 548, 611, 571, 640],
                 borderWidth: 1,
             },
         ],
