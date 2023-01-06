@@ -11,4 +11,9 @@ class jurusan extends Model
 
     protected $table = "jurusan";
     protected $guarded = [];
+
+    public function siswa()
+    {
+        return $this->hasMany(siswa::class);
+    }
 }

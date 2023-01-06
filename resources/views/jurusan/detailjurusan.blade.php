@@ -12,7 +12,7 @@
                     <h4 class="mb-4">Jurusan Details : {{ $jurusan->name }}</h4>
                     <a href="/jurusan" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
                 </div>
-                <div class="card">
+                <div class="card mb-5">
                     <div class="card-body">
                         <div class="row justify-content-center mt-2 ">
                             <div class="col-lg-3 col-md-2 ">
@@ -34,6 +34,31 @@
                         <hr class="mt-4 mb-4">
                     </div>
                 </div>
+                <table id="table" class="table overflow-x-auto">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Siswa</th>
+                            <th>Kelas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($siswa as $data)
+                            <tr>
+
+                                <td>{{ $loop->iteration }}</td>
+                                <td>
+                                @foreach ($data->siswa as $siswaData)
+                                    - {{ $siswaData->name }}
+                                    @endforeach
+                                </td>
+                                <td>{{ $data->name }}</td>
+
+                            </tr>
+                        @endforeach
+
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

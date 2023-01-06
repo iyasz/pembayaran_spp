@@ -41,6 +41,8 @@ class jurusanController extends Controller
 
     function detail($id){
         $find = jurusan::find($id);
-        return view('jurusan.detailjurusan', ['jurusan' => $find]);
+        $siswa = jurusan::with('siswa')->get();
+
+        return view('jurusan.detailjurusan', ['jurusan' => $find, 'siswa' => $siswa]);
     }
 }
