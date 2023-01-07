@@ -55,8 +55,9 @@
                     </div>
                 </div>
 
-                <table id="table" class="table overflow-x-auto">
-                    <thead>
+                <div class="table-responsive">
+                    <table id="table" class="table align-middle">
+                        <thead>
                         <tr>
                             <th>#</th>
                             <th>Nama</th>
@@ -67,12 +68,12 @@
                     </thead>
                     <tbody>
                         @foreach ($admin as $data)
-                            <tr>
+                        <tr class="align-middle">
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $data->name }}</td>
                                 <td>{{ $data->password }}</td>
                                 <td>{{ $data->telp }}</td>
-                                <td class="d-flex">
+                                <td class="d-flex align-middle">
                                     <a href="/admin/detail/{{ $data->id }}"><i class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
                                     <a href="/admin/{{$data->id}}/update"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
                                     <form action="/admin/{{$data->id}}" method="post">
@@ -82,10 +83,11 @@
                                     </form>
                                 </td>
                             </tr>
-                        @endforeach
-
-                    </tbody>
-                </table>
+                            @endforeach
+                            
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

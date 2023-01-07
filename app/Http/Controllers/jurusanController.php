@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class jurusanController extends Controller
 {
     function index(){
-        $jurusan = jurusan::all();
+        $jurusan = jurusan::with('siswa')->get();
         return view('jurusan.jurusan', ['jurusan' => $jurusan]);
     }
 
@@ -41,8 +41,7 @@ class jurusanController extends Controller
 
     function detail($id){
         $find = jurusan::find($id);
-        $siswa = jurusan::with('siswa')->get();
 
-        return view('jurusan.detailjurusan', ['jurusan' => $find, 'siswa' => $siswa]);
+        return view('jurusan.detailjurusan', ['jurusan' => $find]);
     }
 }

@@ -34,16 +34,7 @@
                         <hr class="mt-4 mb-4">
                     </div>
                 </div>
-                <table id="table" class="table overflow-x-auto">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Siswa</th>
-                            <th>Kelas</th>
-                        </tr>
-                    </thead>
 
-                </table>
             </div>
         </div>
     </div>

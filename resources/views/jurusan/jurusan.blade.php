@@ -56,8 +56,10 @@
                     </div>
                 </div>
 
-                <table id="table" class="table overflow-x-auto">
-                    <thead>
+                <div class="table-responsive">
+
+                    <table id="table" class="table">
+                        <thead>
                         <tr>
                             <th>#</th>
                             <th>Nama Jurusan</th>
@@ -80,10 +82,12 @@
                                     </form>
                                 </td>
                             </tr>
-                        @endforeach
+                            @endforeach
+                            
+                        </tbody>
+                    </table>
+                </div>
 
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
