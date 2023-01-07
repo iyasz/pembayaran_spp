@@ -42,22 +42,7 @@
                             <th>Kelas</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        @foreach ($siswa as $data)
-                            <tr>
 
-                                <td>{{ $loop->iteration }}</td>
-                                <td>
-                                @foreach ($data->siswa as $siswaData)
-                                    - {{ $siswaData->name }}
-                                    @endforeach
-                                </td>
-                                <td>{{ $data->name }}</td>
-
-                            </tr>
-                        @endforeach
-
-                    </tbody>
                 </table>
             </div>
         </div>
