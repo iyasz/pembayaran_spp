@@ -76,7 +76,7 @@
                             <td class="d-flex">
                                 <a href="/siswa/detail/{{ $data->id }}"><i class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
                                 <a href="/siswa/update/{{$data->id}}"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
-                                <form action="/siswa/{{$data->id}}" method="post">
+                                <form action="/transaksi/{{$data->id}}" method="post">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" value="delete" class="border-0 bg-transparent "><i class='bx bx-trash fs-5 mx-1 text-gray'></i></button>

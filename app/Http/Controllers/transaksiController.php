@@ -25,4 +25,11 @@ class transaksiController extends Controller
         transaksi::create($req->except('_token', 'add'));
         return redirect('/transaksi');
     }
+
+    public function delete($id)
+    {
+        $find = transaksi::find($id);
+        $find->delete();
+        return redirect('/transaksi');
+    }
 }
