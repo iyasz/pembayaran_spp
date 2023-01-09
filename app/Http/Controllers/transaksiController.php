@@ -10,7 +10,7 @@ class transaksiController extends Controller
 {
     public function index()
     {
-        $trx = transaksi::all();
+        $trx = transaksi::with('siswa')->get();
         return view('transaksi.transaksi', ['trx' => $trx]);
     }
 

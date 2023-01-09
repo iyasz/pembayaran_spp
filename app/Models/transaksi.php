@@ -22,4 +22,9 @@ class transaksi extends Model
     {
         return $this->belongsTo(jurusan::class);
     }
+
+    public function siswa()
+    {
+        return $this->belongsTo(siswa::class);
+    }
 }

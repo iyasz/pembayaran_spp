@@ -90,7 +90,7 @@ Route::get('/transaksi/create', [transaksiController::class, 'createview']);
 
 Route::post('/transaksi/store', [transaksiController::class, 'create']);
 
-Route::delete('/transaksi/{id}', [transaksiController::class, 'delete']);
+Route::get('/transaksi/{id}', [transaksiController::class, 'delete']);
 
 // End Transaksi 
 
