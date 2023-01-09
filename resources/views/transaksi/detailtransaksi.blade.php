@@ -1,0 +1,86 @@
+@extends('layout.mainlayout')
+
+@section('title', 'Detail Transaksi')
+@section('tr', 'active')
+@section('ictr', 'active-icon')
+
+@section('content')
+    <div class="row">
+        <div class="col-12">
+            <div class="h-100 main">
+                    @csrf
+                    <div class="d-flex">
+                        <h4 class="mb-4">Transaksi Details : {{ $data->no_transaksi }}</h4>
+                        <a href="/transaksi/" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">No Transaksi</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12">
+                                    <label class="mt-2 me-5 label-input">{{$data->no_transaksi}}</label>
+                                </div>
+                            </div>
+                            <hr class="mt-4 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Admin</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12">
+                                    <label class="mt-2 me-5 label-input">{{$data->admin['name']}}</label>
+                                </div>
+                            </div>
+                            <hr class="mt-4 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Siswa</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12">
+                                    <label class="mt-2 me-5 label-input">{{$data->siswa['name']}}</label>
+                                </div>
+                            </div>
+                            <hr class="mt-4 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Cara Bayar</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12">
+                                    <label class="mt-2 me-5 label-input"> @if ($data->cara_bayar == "C") CASH @else TRANSFER @endif </label>
+                                </div>
+                            </div>
+                            <hr class="mt-4 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Tanggal Transaksi</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12">
+                                    <label class="mt-2 me-5 label-input">{{$data->tgl_transaksi}}</label>
+                                </div>
+                            </div>
+                            <hr class="mt-4 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Total</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12">
+                                    <label class="mt-2 me-5 label-input">{{$data->total}}</label>
+                                </div>
+                            </div>
+                            <hr class="mt-4 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Note</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12">
+                                    <label class="mt-2 me-5 label-input">{{$data->note}}</label>
+                                </div>
+                            </div>
+                            <hr class="mt-4 mb-4">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+@endsection

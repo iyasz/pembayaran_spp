@@ -13,6 +13,7 @@ class transaksi extends Model
 
     protected $guarded = [];
     
+    
     public function kelas()
     {
         return $this->belongsTo(kelas::class);
@@ -26,5 +27,10 @@ class transaksi extends Model
     public function siswa()
     {
         return $this->belongsTo(siswa::class);
+    }
+
+    public function admin()
+    {
+        return $this->belongsTo(admin::class);
     }
 }

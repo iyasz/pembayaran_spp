@@ -92,6 +92,8 @@ Route::post('/transaksi/store', [transaksiController::class, 'create']);
 
 Route::get('/transaksi/{id}', [transaksiController::class, 'delete']);
 
+Route::get('/transaksi/detail/{id}', [transaksiController::class, 'detail']);
+
 // End Transaksi 
 
 // Jurusan Route 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\admin;
 use App\Models\siswa;
 use App\Models\transaksi;
 use Illuminate\Http\Request;
@@ -31,5 +32,12 @@ class transaksiController extends Controller
         $find = transaksi::find($id);
         $find->delete();
         return redirect('/transaksi');
+    }
+
+    public function detail($id)
+    {
+        $find = transaksi::find($id);
+        // $admin = transaksi::with('admin')->get();
+        return view('transaksi.detailtransaksi', ['data' => $find]);
     }
 }
