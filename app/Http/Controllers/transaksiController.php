@@ -24,19 +24,19 @@ class transaksiController extends Controller
     public function create(Request $req)
     {
         transaksi::create($req->except('_token', 'add'));
-        return redirect('/transaksi');
+        return redirect('/transaksi')->with('createSuccess', 'success');
     }
 
     public function delete($id)
     {
         $find = transaksi::find($id);
         $find->delete();
-        return redirect('/transaksi');
+        return redirect('/transaksi')->with('deleteSuccess', 'success');
     }
 
     public function detail($id)
     {
-        $find = transaksi::find($id);
+        $find = transaksi::with(['siswa.kelas', 'siswa.jurusan'])->get()->find($id);
         // $admin = transaksi::with('admin')->get();
         return view('transaksi.detailtransaksi', ['data' => $find]);
     }
