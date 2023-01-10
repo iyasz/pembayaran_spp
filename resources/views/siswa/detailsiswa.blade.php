@@ -8,8 +8,6 @@
     <div class="row">
         <div class="col-12">
             <div class="h-100 main">
-                <form action="/siswa/store" method="POST">
-                    @csrf
                     <div class="d-flex">
                         <h4 class="mb-4">Student Details : {{ $siswa->name }}</h4>
                         <a href="/siswa/" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
@@ -72,7 +70,6 @@
                             <hr class="mt-4 mb-4">
                         </div>
                     </div>
-                </form>
             </div>
         </div>
     </div>

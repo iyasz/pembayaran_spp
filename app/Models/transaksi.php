@@ -33,4 +33,5 @@ class transaksi extends Model
     {
         return $this->belongsTo(admin::class);
     }
+    
 }

@@ -17,7 +17,7 @@ class transaksiController extends Controller
 
     public function createview()
     {
-        $siswa = siswa::all();
+        $siswa = siswa::with(['jurusan', 'kelas'])->get();
         return view('transaksi.createtransaksi', ['siswa' => $siswa]);
     }
 
