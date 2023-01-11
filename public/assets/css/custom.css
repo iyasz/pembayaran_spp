@@ -357,4 +357,10 @@ a {
 
 /* end swiper  */
 
+.alert-error {
+  font-size: 12px !important;
+  margin-top: 2px;
+  height: 13px !important;
+}
+
 /* end content */

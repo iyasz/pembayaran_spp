@@ -22,6 +22,14 @@ class adminController extends Controller
     }
 
     function store(Request $request){
+
+        $validated = $request->validate([
+            'name' => ['required', 'max:100'],
+            'username' => ['required', 'unique:admins', 'max:100'],
+            'email' => ['required', 'unique:admins', 'max:100'],
+            'password' => ['required', 'max:100'],
+        ]);
+
         admin::create($request->except('_token', 'addAdmin'));
         return redirect('/admin')->with('createSuccess', 'Data');
     }
