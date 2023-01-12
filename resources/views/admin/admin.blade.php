@@ -56,8 +56,8 @@
                 </div>
 
                 <div class="table-responsive">
-                    <table id="table" class="table align-middle">
-                        <thead>
+                    <table id="table" class="table ">
+                        <thead class="">
                         <tr>
                             <th>#</th>
                             <th>Nama</th>
@@ -73,7 +73,7 @@
                                 <td>{{ $data->name }}</td>
                                 <td>{{ $data->password }}</td>
                                 <td>{{ $data->telp }}</td>
-                                <td class="d-flex align-middle">
+                                <td class="d-flex ">
                                     <a href="/admin/detail/{{ $data->id }}"><i class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
                                     <a href="/admin/{{$data->id}}/update"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
                                     <form action="/admin/{{$data->id}}" method="post">

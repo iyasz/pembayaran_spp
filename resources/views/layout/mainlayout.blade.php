@@ -55,7 +55,11 @@
                             class="nav_name">Dashboard</span> </a>
                     <a href="/admin" class="nav_link @yield('adm')"> <i
                             class='bx bx-user nav_icon @yield('icadm')'></i> <span class="nav_name">Admin</span>
-                    </a> <a href="/siswa" class="nav_link @yield('swa')"><i
+                    </a>
+                    <a href="/jurusan" class="nav_link @yield('jrs')"> <i
+                        class='bx bxs-graduation nav_icon @yield('icjrs')'></i> <span
+                        class="nav_name">Guru</span> </a>
+                     <a href="/siswa" class="nav_link @yield('swa')"><i
                             class='bx bx-user-pin nav_icon @yield('icswa')'></i> <span class="nav_name">Siswa</span>
                     </a>
                     <a href="/transaksi" class="nav_link @yield('tr')"> <i
@@ -64,15 +68,17 @@
                     </a> <a href="/kelas" class="nav_link @yield('kls')"> <i
                             class='bx bx-home-alt nav_icon @yield('ickls')'></i> <span class="nav_name">Kelas</span>
                     </a>
-                    </a> <a href="/jurusan" class="nav_link @yield('jrs')"> <i
+                    </a>
+                    <a href="/jurusan" class="nav_link @yield('jrs')"> <i
                             class='bx bx-code-curly nav_icon @yield('icjrs')'></i> <span
                             class="nav_name">Jurusan</span> </a>
+             
                 </div>
             </div>
             <hr class="mx-3 hr-nav mb-0">
-            <div class="mb-2 mt-0 position-relative">
-                <a href="" class="nav_link mb-2"><i class='bx bx-cog nav_icon'></i> <span
-                        class="nav_name">Settings</span></a>
+            <div class=" mt-0 position-relative">
+                {{-- <a href="" class="nav_link mb-2"><i class='bx bx-cog nav_icon'></i> <span
+                        class="nav_name">Settings</span></a> --}}
                 <a href="logout.php" class="nav_link "><i class='bx bx-log-out nav_icon icon-bot'></i> <span
                         class="nav_name name-bot">Log Out</span> </a>
             </div>

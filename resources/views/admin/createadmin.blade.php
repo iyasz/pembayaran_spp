@@ -19,9 +19,7 @@
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
                                     <input autocomplete="off" name="name" type="text" class="form-control text-gray">
-                                    <div class="alert-error text-danger">@foreach ($errors->all() as $err)
-                                        {{$err}}
-                                    @endforeach</div>
+                                    <div class="alert-error text-danger">@foreach ($errors->get('name') as $err) {{$err}} @endforeach</div>
                                 </div>
                             </div>
                             <hr class="mt-2 mb-4">
@@ -31,27 +29,30 @@
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
                                     <input autocomplete="off" name="username" type="text" class="form-control text-gray">
+                                    <div class="alert-error text-danger">@foreach ($errors->get('username') as $err) {{$err}} @endforeach</div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Email</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
                                     <input autocomplete="off" name="email" type="text" class="form-control text-gray">
+                                    <div class="alert-error text-danger">@foreach ($errors->get('email') as $err) {{$err}} @endforeach</div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Password</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
                                     <input autocomplete="off" name="password" type="text" class="form-control text-gray">
+                                    <div class="alert-error text-danger">@foreach ($errors->get('password') as $err) {{$err}} @endforeach</div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Gender</label>
@@ -62,27 +63,30 @@
                                         <option value="M">Laki Laki</option>
                                         <option value="W">Perempuan</option>
                                     </select>
+                                    <div class="alert-error text-danger">@foreach ($errors->get('gender') as $err) {{$err}} @endforeach</div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Telepon</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
                                     <input autocomplete="off" name="telp" type="text" class="form-control text-gray">
+                                    <div class="alert-error text-danger">@foreach ($errors->get('telp') as $err) {{$err}} @endforeach</div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Alamat</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
                                     <textarea autocomplete="off" name="alamat" type="text" class="form-control text-gray"> </textarea>
+                                    <div class="alert-error text-danger">@foreach ($errors->get('alamat') as $err) {{$err}} @endforeach</div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Created At</label>

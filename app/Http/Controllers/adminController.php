@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\createAdminRequest;
 use App\Models\admin;
 use Illuminate\Http\Request;
 
@@ -21,14 +22,9 @@ class adminController extends Controller
         return view('admin.detailadmin', ['admin' => $admin]);
     }
 
-    function store(Request $request){
+    function store(createAdminRequest $request){
 
-        $validated = $request->validate([
-            'name' => ['required', 'max:100'],
-            'username' => ['required', 'unique:admins', 'max:100'],
-            'email' => ['required', 'unique:admins', 'max:100'],
-            'password' => ['required', 'max:100'],
-        ]);
+        $validated = $request->validate();
 
         admin::create($request->except('_token', 'addAdmin'));
         return redirect('/admin')->with('createSuccess', 'Data');
