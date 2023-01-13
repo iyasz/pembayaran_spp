@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\guruController;
 use App\Http\Controllers\jurusanController;
 use App\Http\Controllers\kelasController;
 use App\Http\Controllers\siswaController;
@@ -49,7 +50,7 @@ Route::delete('/admin/{id}',[adminController::class, 'destroy']);
 
 // guru Route 
 
-// Route::get('/guru',)
+Route::get('/guru', [guruController::class, 'index']);
 
 // End Guru 
 
