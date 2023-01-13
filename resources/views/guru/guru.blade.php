@@ -75,16 +75,16 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $data->name }}</td>
-                                    <td>@if($data->is_hometeacher == 0) Bukan @else Benar @endif</td>
+                                    <td>@if($data->is_hometeacher == 0) Bukan Walas @else Benar @endif</td>
                                     <td class="d-flex">
                                         <a href="/transaksi/detail/{{ $data->id }}"><i
                                                 class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
                                         <a href="/siswa/update/{{ $data->id }}"><i
                                                 class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
-                                        <form action="/transaksi/{{ $data->id }}" method="GET">
+                                        <form action="/guru/{{ $data->id }}" method="post">
                                             @csrf
-                                            <button type="submit" value="delete" class="border-0 bg-transparent "><i
-                                                    class='bx bx-trash fs-5 mx-1 text-gray'></i></button>
+                                            @method('delete')
+                                            <button type="submit" value="delete" class="border-0 bg-transparent "><i class='bx bx-trash fs-5 mx-1 text-gray'></i></button>
                                         </form>
                                     </td>
                                 </tr>

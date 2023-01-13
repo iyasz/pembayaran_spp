@@ -56,6 +56,8 @@ Route::get('/guru/create', [guruController::class, 'createview']);
 
 Route::post('/guru/store', [guruController::class, 'create']);
 
+Route::delete('/guru/{id}', [guruController::class, 'destroy']);
+
 // End Guru 
 
 // siswa route 

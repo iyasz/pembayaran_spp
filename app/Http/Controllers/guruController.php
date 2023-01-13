@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\guruPostRequest;
 use App\Models\guru;
 use App\Models\jurusan;
 use App\Models\kelas;
@@ -24,9 +25,16 @@ class guruController extends Controller
         return view('guru.createguru', ['kelas' => $kelas, 'jurusan' => $jurusan]);
     }
 
-    public function create(Request $request)
+    public function create(guruPostRequest $request)
     {
         guru::create($request->except('_token', 'addGuru'));
         return redirect('/guru')->with('createSuccess', 'data');
+    }
+
+    public function destroy($id)
+    {
+        $find = guru::find($id);
+        $find->delete();
+        return redirect('/guru')->with('deleteSuccess', 'data');
     }
 }
