@@ -11,6 +11,7 @@ class guru extends Model
 
     protected $table = "guru";
     protected $guarded = [];
+    public $timestamps = false;
 
     public function kelas()
     {

@@ -52,6 +52,10 @@ Route::delete('/admin/{id}',[adminController::class, 'destroy']);
 
 Route::get('/guru', [guruController::class, 'index']);
 
+Route::get('/guru/create', [guruController::class, 'createview']);
+
+Route::post('/guru/store', [guruController::class, 'create']);
+
 // End Guru 
 
 // siswa route 

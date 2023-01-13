@@ -75,7 +75,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $data->name }}</td>
-                                    <td>@if($data->is_hometeacher == 0) Bukan @else Wali Kelas @endif</td>
+                                    <td>@if($data->is_hometeacher == 0) Bukan @else Benar @endif</td>
                                     <td class="d-flex">
                                         <a href="/transaksi/detail/{{ $data->id }}"><i
                                                 class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>

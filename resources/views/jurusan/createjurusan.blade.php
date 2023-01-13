@@ -40,7 +40,7 @@
                             class="btn btn-primary btn-add d-lg-inline d-md-inline d-none">Buat Jurusan</button>
 
                         <button type="submit" name="addJurusan" value="save"
-                            class="btn btn-primary btn-add w-100 d-lg-none d-md-none d-block mb-2">Buat Admin</button>
+                            class="btn btn-primary btn-add w-100 d-lg-none d-md-none d-block mb-2">Buat Jurusan</button>
                         <a href="/jurusan" class="btn btn-primary w-100 btn-cancel d-lg-none d-md-none d-block">Batal</a>
                     </div>
                 </form>
