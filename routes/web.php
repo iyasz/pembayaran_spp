@@ -47,6 +47,12 @@ Route::delete('/admin/{id}',[adminController::class, 'destroy']);
 
 // end admin 
 
+// guru Route 
+
+// Route::get('/guru',)
+
+// End Guru 
+
 // siswa route 
 
 Route::get('/siswa',[siswaController::class, 'index']);

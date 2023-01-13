@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\createAdminRequest;
 use App\Models\admin;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class adminController extends Controller
@@ -24,7 +25,7 @@ class adminController extends Controller
 
     function store(createAdminRequest $request){
 
-        $validated = $request->validate();
+        // $request["created_at"] = Carbon::now()->format("Y-m-d H:i:s");
 
         admin::create($request->except('_token', 'addAdmin'));
         return redirect('/admin')->with('createSuccess', 'Data');

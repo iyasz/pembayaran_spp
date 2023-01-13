@@ -56,8 +56,8 @@
                     <a href="/admin" class="nav_link @yield('adm')"> <i
                             class='bx bx-user nav_icon @yield('icadm')'></i> <span class="nav_name">Admin</span>
                     </a>
-                    <a href="/jurusan" class="nav_link @yield('jrs')"> <i
-                        class='bx bxs-graduation nav_icon @yield('icjrs')'></i> <span
+                    <a href="/guru" class="nav_link @yield('guru')"> <i
+                        class='bx bxs-graduation nav_icon @yield('icguru')'></i> <span
                         class="nav_name">Guru</span> </a>
                      <a href="/siswa" class="nav_link @yield('swa')"><i
                             class='bx bx-user-pin nav_icon @yield('icswa')'></i> <span class="nav_name">Siswa</span>

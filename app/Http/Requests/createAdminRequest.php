@@ -29,7 +29,7 @@ class createAdminRequest extends FormRequest
             'email' => ['required', 'unique:admins', 'max:100'],
             'password' => ['required', 'max:100'],
             'gender' => ['required', 'in:M,W'],
-            'telp' => ['required', 'uniqe:admins', 'max:20'],
+            'telp' => ['required', 'unique:admins', 'digits_between:0,20', 'numeric'],
             'alamat' => ['required', 'max:150'],
         ];
     }
@@ -49,13 +49,22 @@ class createAdminRequest extends FormRequest
             'username.max' => "Panjang Username Maximal :max Character!",
             'email.max' => "Panjang Email Maximal :max Character!",
             'password.max' => "Panjang Password Maximal :max Character!",
-            'gender.in' => "Gender Tidak Sesuai!",
-            'telp.max' => "Panjang Telepon Maximal :max Character!",
+            'telp.digits_between' => "Panjang Telepon Maximal 20!",
             'alamat.max' => "Panjang Alamat Maximal :max Character!",
-
+            
             'username.unique' => "Username Telah Digunakan!",
             'email.unique' => "Email Telah Digunakan!",
             'telp.unique' => "Telepon Telah Digunakan!",
+
+            'gender.in' => "Gender Tidak Sesuai!",
+            'telp.numeric' => "Telepon Harus Angka!",
         ];
     }
+
+    // public function old()
+    // {
+    //     return [
+    //         'telp.unique' => "Telepon Telah Digunakan!"
+    //     ];
+    // }
 }

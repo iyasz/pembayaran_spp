@@ -230,7 +230,7 @@ a {
   overflow-x: hidden;
 }
 
-.form-control:focus, .form-select:focus {
+.form-control:focus, .form-select:focus, .form-control.is-invalid:focus, .form-select.is-invalid:focus {
   box-shadow: none;
 }
 
