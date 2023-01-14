@@ -20,6 +20,20 @@
             });
         </script>
     @endif
+    @if (SESSION('createFailed'))
+        <script>
+            iziToast.show({
+                icon: "fa-solid fa-xmark",
+                message: "Data Gagal Disimpan!",
+                position: "topCenter",
+                drag: false,
+                pauseOnHover: false,
+                color: "red",
+                iconUrl: null,
+                timeout: 4100,
+            });
+        </script>
+    @endif
     @if (SESSION('updateSuccess'))
         <script>
             iziToast.show({
@@ -59,9 +73,9 @@
                     </div>
                 </div>
 
-                <div class="table-responsive">
+                {{-- <div class="table-responsive"> --}}
 
-                    <table id="table" class="table overflow-x-auto">
+                    <table id="table" class="table display responsive nowrap" width="100%">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -75,9 +89,11 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $data->name }}</td>
-                                    <td>@if($data->is_hometeacher == 0) Bukan Walas @else Benar @endif</td>
+                                    <td class=""><div class="@if($data->is_hometeacher == "0") status-salah @else status-benar @endif">
+                                        @if($data->is_hometeacher == 0) Bukan Walas @else Walas @endif
+                                    </div></td>
                                     <td class="d-flex">
-                                        <a href="/transaksi/detail/{{ $data->id }}"><i
+                                        <a href="/guru/detail/{{ $data->id }}"><i
                                                 class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
                                         <a href="/siswa/update/{{ $data->id }}"><i
                                                 class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
@@ -91,7 +107,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </div>

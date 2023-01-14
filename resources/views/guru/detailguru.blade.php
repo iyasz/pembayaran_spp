@@ -1,0 +1,70 @@
+@extends('layout.mainlayout')
+
+@section('title', 'Detail Guru')
+@section('guru', 'active')
+@section('icguru', 'active-icon')
+
+@section('content')
+    <div class="row">
+        <div class="col-12">
+            <div class="h-100 main">
+                <div class="d-flex">
+                    <h4 class="mb-4">Guru Details : {{ $guru->name }}</h4>
+                    <a href="/guru/" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row justify-content-center mt-2 ">
+                            <div class="col-lg-3 col-md-2 ">
+                                <label class="mt-2 me-5 label-input">ID Guru</label>
+                            </div>
+                            <div class="col-lg-8 col-md-9 col-12">
+                                <label class="mt-2 me-5 label-input">{{$guru->id}}</label>
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-4">
+                        <div class="row justify-content-center mt-2 ">
+                            <div class="col-lg-3 col-md-2 ">
+                                <label class="mt-2 me-5 label-input">Name</label>
+                            </div>
+                            <div class="col-lg-8 col-md-9 col-12">
+                                <label class="mt-2 me-5 label-input">{{$guru->name}}</label>
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-4">
+                        <div class="row justify-content-center mt-2 ">
+                            <div class="col-lg-3 col-md-2 ">
+                                <label class="mt-2 me-5 label-input">Status Guru</label>
+                            </div>
+                            <div class="col-lg-8 col-md-9 col-12">
+                                <label class="mt-2 me-5"><div class="@if($guru->is_hometeacher == "0") status-salah @else status-benar @endif">
+                                    @if($guru->is_hometeacher == 0) Bukan Walas @else Walas @endif
+                                </div></label>
+                                {{-- <label class="mt-2 me-5 label-input">{{$guru->is_hometeacher}}</label> --}}
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-4">
+                        <div class="row justify-content-center mt-2 ">
+                            <div class="col-lg-3 col-md-2 ">
+                                <label class="mt-2 me-5 label-input">Kelas</label>
+                            </div>
+                            <div class="col-lg-8 col-md-9 col-12">
+                                <label class="mt-2 me-5 label-input">{{$guru->kelas['name']}}</label>
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-4">
+                        <div class="row justify-content-center mt-2 ">
+                            <div class="col-lg-3 col-md-2 ">
+                                <label class="mt-2 me-5 label-input">Jurusan</label>
+                            </div>
+                            <div class="col-lg-8 col-md-9 col-12">
+                                <label class="mt-2 me-5 label-input">{{$guru->jurusan['name']}}</label>
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

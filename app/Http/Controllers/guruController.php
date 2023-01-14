@@ -27,8 +27,17 @@ class guruController extends Controller
 
     public function create(guruPostRequest $request)
     {
-        guru::create($request->except('_token', 'addGuru'));
-        return redirect('/guru')->with('createSuccess', 'data');
+
+        $find = kelas::find($request->kelas_id);
+        $find2 = jurusan::find($request->jurusan_id);
+
+        if($find == TRUE AND $find2 == TRUE){
+            guru::create($request->except('_token', 'addGuru'));
+            return redirect('/guru')->with('createSuccess', 'data');
+        }else{
+            return redirect('/guru')->with('createFailed', 'Failed');
+        }
+     
     }
 
     public function destroy($id)
@@ -36,5 +45,11 @@ class guruController extends Controller
         $find = guru::find($id);
         $find->delete();
         return redirect('/guru')->with('deleteSuccess', 'data');
+    }
+
+    public function detail($id)
+    {
+        $guru = guru::with(['kelas','jurusan'])->get()->find($id);
+        return view('guru.detailguru', ['guru' => $guru]);
     }
 }

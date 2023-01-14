@@ -363,4 +363,24 @@ a {
   height: 13px !important;
 }
 
+.status-benar {
+  background-color: #6fd57d !important;
+  color: #12501b !important;
+  border-radius: 9999px;
+  width: fit-content !important;
+  font-weight: bolder;
+  padding: 5px 10px;
+  font-size: 12px !important;
+}
+
+.status-salah {
+  background-color:#ca6363 !important ;
+  color: #501212 !important;
+  border-radius: 9999px;
+  width: fit-content !important;
+  font-weight: bolder;
+  padding: 5px 10px;
+  font-size: 12px !important;
+}
+
 /* end content */
