@@ -52,4 +52,19 @@ class guruController extends Controller
         $guru = guru::with(['kelas','jurusan'])->get()->find($id);
         return view('guru.detailguru', ['guru' => $guru]);
     }
+
+    public function updateview($id)
+    {
+        $kelas = kelas::all();
+        $jurusan = jurusan::all();
+        $guru = guru::find($id);
+        return view('guru.updateguru', ['guru' => $guru, 'kelas' => $kelas, 'jurusan' => $jurusan]);
+    }
+
+    public function update($id, guruPostRequest $request)
+    {
+        $guru = guru::find($id);
+        $guru->update($request->except('_token', 'updateGuru'));
+        return redirect('/guru')->with('updateSuccess', 'Data');
+    }
 }

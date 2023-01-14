@@ -49,7 +49,7 @@
                                 <label class="mt-2 me-5 label-input">Kelas</label>
                             </div>
                             <div class="col-lg-8 col-md-9 col-12">
-                                <label class="mt-2 me-5 label-input">{{$guru->kelas['name']}}</label>
+                                <label class="mt-2 me-5 label-input">@if(@isset($guru->kelas['name'])){{$guru->kelas['name']}} @else Tidak Ada @endif</label>
                             </div>
                         </div>
                         <hr class="mt-4 mb-4">
@@ -58,7 +58,7 @@
                                 <label class="mt-2 me-5 label-input">Jurusan</label>
                             </div>
                             <div class="col-lg-8 col-md-9 col-12">
-                                <label class="mt-2 me-5 label-input">{{$guru->jurusan['name']}}</label>
+                                <label class="mt-2 me-5 label-input">@if(@isset($guru->jurusan['name'])){{$guru->jurusan['name']}} @else Tidak Ada @endif</label>
                             </div>
                         </div>
                         <hr class="mt-4 mb-4">

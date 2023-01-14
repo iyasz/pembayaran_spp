@@ -95,7 +95,7 @@
                                     <td class="d-flex">
                                         <a href="/guru/detail/{{ $data->id }}"><i
                                                 class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
-                                        <a href="/siswa/update/{{ $data->id }}"><i
+                                        <a href="/guru/update/{{ $data->id }}"><i
                                                 class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
                                         <form action="/guru/{{ $data->id }}" method="post">
                                             @csrf

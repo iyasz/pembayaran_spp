@@ -60,6 +60,10 @@ Route::delete('/guru/{id}', [guruController::class, 'destroy']);
 
 Route::get('/guru/detail/{id}', [guruController::class, 'detail']);
 
+Route::get('/guru/update/{id}', [guruController::class, 'updateview']);
+
+Route::post('/guru/update/{id}', [guruController::class, 'update']);
+
 // End Guru 
 
 // siswa route 
