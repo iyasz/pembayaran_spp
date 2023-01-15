@@ -25,7 +25,7 @@ class guruPostRequest extends FormRequest
     {
         return [
             'name' => ['required', 'max:100'],
-            'is_hometeacher' => ['required', 'in:0,1'],
+            'is_hometeacher' => ['required', 'in:2,1'],
             'kelas_id' => ['digits_between:1,2', 'numeric'],
             'jurusan_id' => ['digits_between:1,2', 'numeric'],
         ];

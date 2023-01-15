@@ -13,7 +13,7 @@ class trxPostRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class trxPostRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            ''
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+
         ];
     }
 }

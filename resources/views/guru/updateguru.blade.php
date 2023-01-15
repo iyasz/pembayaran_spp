@@ -31,7 +31,7 @@
                                     <select name="is_hometeacher" class="form-select text-gray @error('is_hometeacher') is-invalid @enderror">
                                         <option disabled>Choose an option</option>
                                         <option @if($guru->is_hometeacher == 1) selected @endif value="1">Benar</option>
-                                        <option @if($guru->is_hometeacher == 0) selected @endif value="0">Bukan</option>
+                                        <option @if($guru->is_hometeacher == 2) selected @endif value="0">Bukan</option>
                                     </select>
                                     <div class="alert-error text-danger">@foreach ($errors->get('is_hometeacher') as $err) {{$err}} @endforeach</div>
                                 </div>

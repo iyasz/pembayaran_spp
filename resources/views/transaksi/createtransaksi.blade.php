@@ -70,6 +70,20 @@
                             <hr class="mt-4 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Status</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12">
+                                    <select name="cara_bayar" class="form-select text-gray">
+                                        <option selected disabled>Choose an option</option>
+                                            <option value="S">Success</option>
+                                            <option value="P">Pending</option>
+                                            <option value="C">Canceled</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="mt-4 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Catatan</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">

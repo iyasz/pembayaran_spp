@@ -90,7 +90,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $data->name }}</td>
                                     <td class=""><div class="@if($data->is_hometeacher == "0")status status-salah @else status status-benar @endif">
-                                        @if($data->is_hometeacher == 0) Bukan Walas @else Walas @endif
+                                        @if($data->is_hometeacher == 2) Bukan Walas @else Walas @endif
                                     </div></td>
                                     <td class="d-flex">
                                         <a href="/guru/detail/{{ $data->id }}"><i
