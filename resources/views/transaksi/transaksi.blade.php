@@ -62,13 +62,13 @@
 
                 <div class="table-responsive">
 
-                    <table id="table" class="table overflow-x-auto">
+                    <table id="table" class="table  display responsive nowrap" width="100%"">
                         <thead>
                             <tr>
                                 <th>#</th>
                                 <th>ID Transaksi</th>
                                 <th>Siswa</th>
-                                <th>Tanggal Transaksi</th>
+                                <th>Status</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -78,7 +78,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $data->no_transaksi }}</td>
                                     <td>{{ $data->siswa['name'] }}</td>
-                                    <td>{{ $data->tgl_transaksi }}</td>
+                                    <td class=""><div class="@if($data->status == 'S')status status-benar @elseif( $data->status == 'P')status status-pending @else status status-salah @endif"> @if($data->status == 'S') Success @elseif( $data->status == 'P') Pending @else Canceled @endif</div> </td>
                                     <td class="d-flex">
                                         <a href="/transaksi/detail/{{ $data->id }}"><i
                                                 class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>

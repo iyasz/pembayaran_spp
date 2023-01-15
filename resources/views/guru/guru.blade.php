@@ -73,7 +73,7 @@
                     </div>
                 </div>
 
-                {{-- <div class="table-responsive"> --}}
+                <div class="table-responsive">
 
                     <table id="table" class="table display responsive nowrap" width="100%">
                         <thead>
@@ -89,7 +89,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $data->name }}</td>
-                                    <td class=""><div class="@if($data->is_hometeacher == "0") status-salah @else status-benar @endif">
+                                    <td class=""><div class="@if($data->is_hometeacher == "0")status status-salah @else status status-benar @endif">
                                         @if($data->is_hometeacher == 0) Bukan Walas @else Walas @endif
                                     </div></td>
                                     <td class="d-flex">
@@ -107,7 +107,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                {{-- </div> --}}
+                </div>
             </div>
         </div>
     </div>

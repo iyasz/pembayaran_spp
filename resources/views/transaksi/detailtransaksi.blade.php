@@ -85,6 +85,15 @@
                         <hr class="mt-4 mb-4">
                         <div class="row justify-content-center mt-2 ">
                             <div class="col-lg-3 col-md-2 ">
+                                <label class="mt-2 me-5 label-input">Status</label>
+                            </div>
+                            <div class="col-lg-8 col-md-9 col-12">
+                                <label class="mt-2 me-5 label-input"><div class="@if($data->status == 'S')status status-benar @elseif( $data->status == 'P')status status-pending @else status status-salah @endif"> @if($data->status == 'S') Success @elseif( $data->status == 'P') Pending @else Canceled @endif</div></label>
+                            </div>
+                        </div>
+                        <hr class="mt-4 mb-4">
+                        <div class="row justify-content-center mt-2 ">
+                            <div class="col-lg-3 col-md-2 ">
                                 <label class="mt-2 me-5 label-input">Total</label>
                             </div>
                             <div class="col-lg-8 col-md-9 col-12">

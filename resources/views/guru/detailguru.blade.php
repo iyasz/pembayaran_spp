@@ -37,7 +37,7 @@
                                 <label class="mt-2 me-5 label-input">Status Guru</label>
                             </div>
                             <div class="col-lg-8 col-md-9 col-12">
-                                <label class="mt-2 me-5"><div class="@if($guru->is_hometeacher == "0") status-salah @else status-benar @endif">
+                                <label class="mt-2 me-5"><div class="@if($guru->is_hometeacher == "0") status status-salah @else status status-benar @endif">
                                     @if($guru->is_hometeacher == 0) Bukan Walas @else Walas @endif
                                 </div></label>
                                 {{-- <label class="mt-2 me-5 label-input">{{$guru->is_hometeacher}}</label> --}}
