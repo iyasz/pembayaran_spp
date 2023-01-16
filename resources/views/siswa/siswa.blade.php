@@ -56,7 +56,10 @@
                     </div>
                 </div>
 
-                <table id="table" class="table overflow-x-auto">
+                <div class="table-responsive">
+
+
+                <table id="table" class="table display responsive nowrap" width="100%">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -87,6 +90,7 @@
 
                     </tbody>
                 </table>
+            </div>
             </div>
         </div>
     </div>
