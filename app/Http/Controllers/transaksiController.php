@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\trxPostRequest;
 use App\Models\admin;
 use App\Models\siswa;
 use App\Models\transaksi;
@@ -21,17 +22,10 @@ class transaksiController extends Controller
         return view('transaksi.createtransaksi', ['siswa' => $siswa]);
     }
 
-    public function create(Request $req)
+    public function create(trxPostRequest $req)
     {
         transaksi::create($req->except('_token', 'add'));
         return redirect('/transaksi')->with('createSuccess', 'success');
-    }
-
-    public function delete($id)
-    {
-        $find = transaksi::find($id);
-        $find->delete();
-        return redirect('/transaksi')->with('deleteSuccess', 'success');
     }
 
     public function detail($id)

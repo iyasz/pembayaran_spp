@@ -24,7 +24,12 @@ class trxPostRequest extends FormRequest
     public function rules()
     {
         return [
-            ''
+            'admin_id' => ['required', ''],
+            'siswa_id' => ['required', ''],
+            'cara_bayar' => ['required', ''],
+            'tgl_transaksi' => ['required', ''],
+            'total' => ['required', ''],
+            'status' => ['required', ''],
         ];
     }
 
