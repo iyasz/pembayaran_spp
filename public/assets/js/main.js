@@ -14,6 +14,7 @@ $(document).ready(function () {
 
 // chart js
 
+
 const ctx = document.getElementById("myChart");
 const plugin = {
   id: 'customCanvasBackgroundColor',

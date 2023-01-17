@@ -117,7 +117,7 @@
                                     <label class="mt-2 me-5 label-input">Catatan</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <textarea class="form-control" name="note" id="floatingTextarea2" style="height: 100px">{{ old('note') }}</textarea>
+                                    <textarea class="form-control text-gray" name="note" id="floatingTextarea2" style="height: 100px">{{ old('note') }}</textarea>
                                 </div>
                             </div>
                             <hr class="mt-4 mb-4">

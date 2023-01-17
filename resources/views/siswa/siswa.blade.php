@@ -46,6 +46,21 @@
       });</script>
 @endif
 
+@if (SESSION('failed'))
+<script>
+    iziToast.show({
+        icon: "fa-solid fa-xmark",
+        message: "Data Gagal Disimpan!",
+        position: "topCenter",
+        drag: false,
+        pauseOnHover: false,
+        color: "red",
+        iconUrl: null,
+        timeout: 4100,
+    });
+</script>
+@endif
+
     <div class="row">
         <div class="col-12">
             <div class="h-100 main">

@@ -18,75 +18,95 @@
                                     <label class="mt-2 me-5 label-input">Name</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <input autocomplete="off" name="name" type="text" class="form-control text-gray">
+                                    <input autocomplete="off" name="name" value="{{old('name')}}" type="text" class="form-control text-gray @error('name') is-invalid @enderror">
+                                    <div class="alert-error text-danger">
+                                        @foreach ($errors->get('name') as $err)
+                                            {{ $err }}
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">NIS</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <input autocomplete="off" name="nis" type="text" class="form-control text-gray">
+                                    <input autocomplete="off" value="{{old('nis')}}" name="nis" type="number" class="form-control text-gray @error('nis') is-invalid @enderror">
+                                    <div class="alert-error text-danger">
+                                        @foreach ($errors->get('nis') as $err)
+                                            {{ $err }}
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Telpon</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <input autocomplete="off" name="telp" type="text" class="form-control text-gray">
+                                    <input autocomplete="off" name="telp" value="{{old('telp')}}" type="number" class="form-control text-gray @error('telp') is-invalid @enderror">
+                                    <div class="alert-error text-danger">
+                                        @foreach ($errors->get('telp') as $err)
+                                            {{ $err }}
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Alamat</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <input autocomplete="off" name="alamat" type="text" class="form-control text-gray">
+                                    <input autocomplete="off" name="alamat" value="{{old('alamat')}}" type="text" class="form-control text-gray @error('alamat') is-invalid @enderror">
+                                    <div class="alert-error text-danger">
+                                        @foreach ($errors->get('alamat') as $err)
+                                            {{ $err }}
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Kelas</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <select name="kelas_id" class="form-select text-gray">
+                                    <select name="kelas_id" class="form-select text-gray @error('kelas_id') is-invalid @enderror">
                                         <option selected disabled>Choose an option</option>
                                         @foreach ($kelas as $class)
-                                            <option value="{{ $class->id }}">{{ $class->name }}</option>
+                                            <option @if(old('kelas_id') == $class->id) selected @endif value="{{ $class->id }}">{{ $class->name }}</option>
                                         @endforeach
                                     </select>
+                                    <div class="alert-error text-danger">
+                                        @foreach ($errors->get('kelas_id') as $err)
+                                            {{ $err }}
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Jurusan</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <select name="jurusan_id" class="form-select text-gray">
+                                    <select name="jurusan_id" class="form-select text-gray @error('jurusan_id') is-invalid @enderror">
                                         <option selected disabled>Choose an option</option>
                                         @foreach ($jurusan as $jur)
-                                            <option value="{{ $jur->id }}">{{ $jur->name }}</option>
+                                            <option @if(old('jurusan_id') == $jur->id) selected @endif value="{{ $jur->id }}">{{ $jur->name }}</option>
                                         @endforeach
                                     </select>
+                                    <div class="alert-error text-danger">
+                                        @foreach ($errors->get('jurusan_id') as $err)
+                                            {{ $err }}
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
-                            <div class="row justify-content-center mt-2 ">
-                                <div class="col-lg-3 col-md-2 ">
-                                    <label class="mt-2 me-5 label-input">Created At</label>
-                                </div>
-                                <div class="col-lg-8 col-md-9 col-12">
-                                    <input type="datetime-local" name="created_at" class="form-control text-gray">
-                                    <input type="hidden" name="updated_at" value="">
-                                </div>
-                            </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                         </div>
                     </div>
                     <div class="mt-4 mb-5 text-end">
