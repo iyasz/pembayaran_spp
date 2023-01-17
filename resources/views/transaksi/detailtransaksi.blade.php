@@ -79,7 +79,7 @@
                                 <label class="mt-2 me-5 label-input">Tanggal Transaksi</label>
                             </div>
                             <div class="col-lg-8 col-md-9 col-12">
-                                <label class="mt-2 me-5 label-input">{{ $data->tgl_transaksi }}</label>
+                                <label class="mt-2 me-5 label-input">{{ date("d M Y", strtotime($data->tgl_transaksi)) }}</label>
                             </div>
                         </div>
                         <hr class="mt-4 mb-4">
@@ -97,7 +97,7 @@
                                 <label class="mt-2 me-5 label-input">Total</label>
                             </div>
                             <div class="col-lg-8 col-md-9 col-12">
-                                <label class="mt-2 me-5 label-input">{{ $data->total }}</label>
+                                <label class="mt-2 me-5 label-input">Rp. {{ number_format($data->total) }},00</label>
                             </div>
                         </div>
                         <hr class="mt-4 mb-4">

@@ -11,6 +11,8 @@ class transaksi extends Model
     use HasFactory;
     protected $table = "transaksi";
 
+    public $timestamps = FALSE;
+
     protected $guarded = [];
     
     

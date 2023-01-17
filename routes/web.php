@@ -113,6 +113,10 @@ Route::get('/transaksi/{id}', [transaksiController::class, 'delete']);
 
 Route::get('/transaksi/detail/{id}', [transaksiController::class, 'detail']);
 
+Route::get('/transaksi/update/{id}', [transaksiController::class, 'updateview']);
+
+Route::put('/transaksi/store/{id}', [transaksiController::class, 'update']);
+
 // End Transaksi 
 
 // Jurusan Route 

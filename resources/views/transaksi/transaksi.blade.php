@@ -47,7 +47,6 @@
                 </div>
 
                 <div class="table-responsive">
-
                     <table id="table" class="table  display responsive nowrap" width="100%">
                         <thead>
                             <tr>
@@ -68,8 +67,13 @@
                                     <td class="d-flex">
                                         <a href="/transaksi/detail/{{ $data->id }}"><i
                                                 class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
-                                        <a href="/siswa/update/{{ $data->id }}"><i
-                                                class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
+                                        <div class=""> @if($data->status == "P")                      
+                                            <a class="" href="/transaksi/update/{{ $data->id }}"><i
+                                                    class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
+                                                    @else
+                                                    <p>---</p>
+                                                    @endif
+                                            </div>
                                     </td>
                                 </tr>
                             @endforeach

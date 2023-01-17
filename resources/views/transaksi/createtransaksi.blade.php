@@ -136,10 +136,10 @@
                     <div class="mt-4 mb-5 text-end">
                         <a href="/transaksi" class="btn btn-primary me-3 btn-cancel d-lg-inline d-md-inline d-none">Batal</a>
                         <button type="submit" name="add" value="save"
-                            class="btn btn-primary btn-add d-lg-inline d-md-inline d-none">Buat Transaksi</button>
+                            class="btn btn-primary btn-add d-lg-inline d-md-inline d-none">Add Transaksi</button>
 
                         <button type="submit" name="add" value="save"
-                            class="btn btn-primary btn-add w-100 d-lg-none d-md-none d-block mb-2">Buat Transaksi</button>
+                            class="btn btn-primary btn-add w-100 d-lg-none d-md-none d-block mb-2">Add Transaksi</button>
                         <a href="/transaksi" class="btn btn-primary w-100 btn-cancel d-lg-none d-md-none d-block">Batal</a>
                     </div>
                 </form>

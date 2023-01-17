@@ -9,8 +9,8 @@
     <div class="col-12">
         <div class="h-100 main">
             <form action="/siswa/{{$siswa->id}}" method="POST">
-                @method('put')
                 @csrf
+                @method('put')
                 <h4 class="mb-4">Update Student Room's</h4>
                 <div class="card">
                     <div class="card-body">
