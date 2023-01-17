@@ -56,7 +56,6 @@
                     </div>
                 </div>
 
-                <div class="table-responsive">
 
 
                 <table id="table" class="table display responsive nowrap" width="100%">
@@ -90,7 +89,6 @@
 
                     </tbody>
                 </table>
-            </div>
             </div>
         </div>
     </div>

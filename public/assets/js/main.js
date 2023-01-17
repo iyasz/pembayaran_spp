@@ -1,6 +1,14 @@
 $(document).ready(function () {
     $("#table").DataTable({
-        responsive: true
+        fixedHeader: true,
+        responsive: true,
+        scrollX:        true,
+        // scrollCollapse: true,
+        paging:         true,
+        fixedHeader:           {
+            header: true,
+            footer: true
+        }
     });
 });
 

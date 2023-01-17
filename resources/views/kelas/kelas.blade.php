@@ -56,7 +56,7 @@
                             <a href="/kelas/create" class="btn btn-primary btn-add mb-3 "><i class='bx bx-plus'></i> Add Class</a>
                         </div>
                     </div>
-                    <table class="table" id="table">
+                    <table class="table display responsive nowrap " width="100%" id="table">
                         <thead>
                             <tr>
                                 <th>#</th>

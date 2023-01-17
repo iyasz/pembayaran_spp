@@ -54,6 +54,10 @@ class transaksiController extends Controller
     public function update($id, Request $req)
     {
         $trx = transaksi::find($id);
+        $validate = $req->validate([
+            'status' => 'required|in:S,P,C',
+        ]);
+
         $trx->update([
             'status' => $req->status,
             'note' => $req->note,

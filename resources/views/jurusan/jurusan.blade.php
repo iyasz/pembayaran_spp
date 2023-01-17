@@ -58,7 +58,7 @@
 
                 <div class="table-responsive">
 
-                    <table id="table" class="table">
+                    <table id="table" class="table display responsive nowrap " width="100%">
                         <thead>
                         <tr>
                             <th>#</th>
