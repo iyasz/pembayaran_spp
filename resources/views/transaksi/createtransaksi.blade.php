@@ -36,7 +36,7 @@
                                     <select name="siswa_id" class="form-select text-gray @error('siswa_id') is-invalid @enderror">
                                         <option selected disabled>Choose an option</option>
                                         @foreach ($siswa as $sis)
-                                            <option value="{{ $sis->id }}">{{ $sis->name }} | {{$sis->kelas['name']}} | {{$sis->jurusan['name']}}</option>
+                                            <option @if(old('siswa_id') == $sis->id) selected @endif value="{{ $sis->id }}">{{ $sis->name }} | {{$sis->kelas['name']}} | {{$sis->jurusan['name']}}</option>
                                         @endforeach
                                     </select>
                                     <div class="alert-error text-danger">
@@ -54,8 +54,8 @@
                                 <div class="col-lg-8 col-md-9 col-12">
                                     <select name="cara_bayar" class="form-select text-gray @error('cara_bayar') is-invalid @enderror">
                                         <option selected disabled>Choose an option</option>
-                                            <option value="C">CASH</option>
-                                            <option value="T">TRANSFER</option>
+                                            <option @if(old('cara_bayar') == "C") selected @endif value="C">CASH</option>
+                                            <option @if(old('cara_bayar') == "T") selected @endif value="T">TRANSFER</option>
                                     </select>
                                     <div class="alert-error text-danger">
                                         @foreach ($errors->get('cara_bayar') as $err)
@@ -70,7 +70,7 @@
                                     <label class="mt-2 me-5 label-input">Tanggal Transaksi</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <input type="datetime-local" name="tgl_transaksi" class="form-control text-gray @error('tgl_transaksi') is-invalid @enderror">
+                                    <input type="datetime-local" value="{{ old('tgl_transaksi') }}" name="tgl_transaksi" class="form-control text-gray @error('tgl_transaksi') is-invalid @enderror">
                                     <div class="alert-error text-danger">
                                         @foreach ($errors->get('tgl_transaksi') as $err)
                                             {{ $err }}
@@ -84,7 +84,7 @@
                                     <label class="mt-2 me-5 label-input">Total</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <input autocomplete="off" name="total" type="number" class="form-control text-gray @error('total') is-invalid @enderror">
+                                    <input autocomplete="off" name="total" value="{{ old('total') }}"  type="number" class="form-control text-gray @error('total') is-invalid @enderror">
                                     <div class="alert-error text-danger">
                                         @foreach ($errors->get('total') as $err)
                                             {{ $err }}
@@ -100,9 +100,9 @@
                                 <div class="col-lg-8 col-md-9 col-12">
                                     <select name="status" class="form-select text-gray @error('status') is-invalid @enderror">
                                         <option selected disabled>Choose an option</option>
-                                            <option value="S">Success</option>
-                                            <option value="P">Pending</option>
-                                            <option value="C">Canceled</option>
+                                            <option @if(old('status') == "S") selected @endif value="S">Success</option>
+                                            <option @if(old('status') == "P") selected @endif value="P">Pending</option>
+                                            <option @if(old('status') == "C") selected @endif value="C">Canceled</option>
                                     </select>
                                     <div class="alert-error text-danger">
                                         @foreach ($errors->get('status') as $err)
@@ -117,7 +117,7 @@
                                     <label class="mt-2 me-5 label-input">Catatan</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <textarea class="form-control" name="note" id="floatingTextarea2" style="height: 100px"></textarea>
+                                    <textarea class="form-control" name="note" id="floatingTextarea2" style="height: 100px">{{ old('note') }}</textarea>
                                 </div>
                             </div>
                             <hr class="mt-4 mb-4">
