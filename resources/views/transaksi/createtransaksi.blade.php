@@ -98,14 +98,14 @@
                                     <label class="mt-2 me-5 label-input">Status</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <select name="cara_bayar" class="form-select text-gray @error('cara_bayar') is-invalid @enderror">
+                                    <select name="status" class="form-select text-gray @error('status') is-invalid @enderror">
                                         <option selected disabled>Choose an option</option>
                                             <option value="S">Success</option>
                                             <option value="P">Pending</option>
                                             <option value="C">Canceled</option>
                                     </select>
                                     <div class="alert-error text-danger">
-                                        @foreach ($errors->get('cara_bayar') as $err)
+                                        @foreach ($errors->get('status') as $err)
                                             {{ $err }}
                                         @endforeach
                                     </div>

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('cara_bayar', '20');
             $table->dateTime('tgl_transaksi', $precision = 0);
             $table->bigInteger('total');
-            $table->text('note');
+            $table->text('note')->nullable();
             $table->timestamps();
         });
     }

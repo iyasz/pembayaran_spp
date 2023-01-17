@@ -24,6 +24,15 @@ class transaksiController extends Controller
 
     public function create(trxPostRequest $req)
     {
+        $siswa = siswa::find($req->siswa_id);
+
+        if($siswa == TRUE AND $siswa == TRUE){
+            transaksi::create($req->except('_token', 'add'));
+            return redirect('/transaksi')->with('createSuccess', 'data');
+        }else{
+            return redirect('/transaksi')->with('createFailed', 'Failed');
+        }
+
         transaksi::create($req->except('_token', 'add'));
         return redirect('/transaksi')->with('createSuccess', 'success');
     }
