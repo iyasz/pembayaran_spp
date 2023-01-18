@@ -18,13 +18,9 @@
                             <div class="col-lg-3 col-md-2 ">
                                 <label class="mt-2 me-5 label-input">Name</label>
                             </div>
-                            <div class="col-lg-8 col-md-9 col-12">
+                            <div class="col-lg-8 col-md-9 col-12 h-10">
                                 <input autocomplete="off" name="name" value="{{$siswa->name}}" type="text" class="form-control text-gray @error('name') is-invalid @enderror">
-                                <div class="alert-error text-danger">
-                                    @foreach ($errors->get('name') as $err)
-                                        {{ $err }}
-                                    @endforeach
-                                </div>
+                                @error('name')<div class="alert-error text-danger">{{$message}}</div>@enderror
                             </div>
                         </div>
                         <hr class="mt-2 mb-4">
@@ -32,13 +28,9 @@
                             <div class="col-lg-3 col-md-2 ">
                                 <label class="mt-2 me-5 label-input">NIS</label>
                             </div>
-                            <div class="col-lg-8 col-md-9 col-12">
+                            <div class="col-lg-8 col-md-9 col-12 h-10">
                                 <input autocomplete="off" name="nis" type="text" value="{{$siswa->nis}}" class="form-control text-gray @error('nis') is-invalid @enderror">
-                                <div class="alert-error text-danger">
-                                    @foreach ($errors->get('nis') as $err)
-                                        {{ $err }}
-                                    @endforeach
-                                </div>
+                                @error('nis')<div class="alert-error text-danger">{{$message}}</div>@enderror
                             </div>
                         </div>
                         <hr class="mt-2 mb-4">
@@ -46,13 +38,9 @@
                             <div class="col-lg-3 col-md-2 ">
                                 <label class="mt-2 me-5 label-input">Telepon</label>
                             </div>
-                            <div class="col-lg-8 col-md-9 col-12">
+                            <div class="col-lg-8 col-md-9 col-12 h-10">
                                 <input autocomplete="off" name="telp" type="text" value="{{$siswa->telp}}" class="form-control text-gray @error('telp') is-invalid @enderror">
-                                <div class="alert-error text-danger">
-                                    @foreach ($errors->get('telp') as $err)
-                                        {{ $err }}
-                                    @endforeach
-                                </div>
+                                @error('telp')<div class="alert-error text-danger">{{$message}}</div>@enderror
                             </div>
                         </div>
                         <hr class="mt-2 mb-4">
@@ -60,13 +48,9 @@
                             <div class="col-lg-3 col-md-2 ">
                                 <label class="mt-2 me-5 label-input">Alamat</label>
                             </div>
-                            <div class="col-lg-8 col-md-9 col-12">
+                            <div class="col-lg-8 col-md-9 col-12 h-10">
                                 <input autocomplete="off" name="alamat" value="{{$siswa->alamat}}" type="text" class="form-control text-gray @error('alamat') is-invalid @enderror">
-                                <div class="alert-error text-danger">
-                                    @foreach ($errors->get('alamat') as $err)
-                                        {{ $err }}
-                                    @endforeach
-                                </div>
+                                @error('alamat')<div class="alert-error text-danger">{{$message}}</div>@enderror
                             </div>
                         </div>
                         <hr class="mt-2 mb-4">
@@ -74,18 +58,14 @@
                             <div class="col-lg-3 col-md-2 ">
                                 <label class="mt-2 me-5 label-input">Kelas</label>
                             </div>
-                            <div class="col-lg-8 col-md-9 col-12">
+                            <div class="col-lg-8 col-md-9 col-12 h-10">
                                 <select name="kelas_id" class="form-select text-gray @error('kelas_id') is-invalid @enderror">
                                     <option disabled>Choose an option</option>
                                     @foreach ($kelas as $class)
                                     <option @if($class->id == $siswa->kelas_id) selected @endif value="{{$class->id}}">{{$class->name}}</option>
                                     @endforeach
                                 </select>
-                                <div class="alert-error text-danger">
-                                    @foreach ($errors->get('kelas_id') as $err)
-                                        {{ $err }}
-                                    @endforeach
-                                </div>
+                                @error('kelas_id')<div class="alert-error text-danger">{{$message}}</div>@enderror
                             </div>
                         </div>
                         <hr class="mt-2 mb-4">
@@ -93,18 +73,14 @@
                             <div class="col-lg-3 col-md-2 ">
                                 <label class="mt-2 me-5 label-input">Jurusan</label>
                             </div>
-                            <div class="col-lg-8 col-md-9 col-12">
+                            <div class="col-lg-8 col-md-9 col-12 h-10">
                                 <select name="jurusan_id" class="form-select text-gray @error('jurusan_id') is-invalid @enderror">
                                     <option selected disabled>Choose an option</option>
                                     @foreach ($jurusan as $jur)
                                     <option @if($jur->id == $siswa->jurusan_id) selected @endif value="{{$jur->id}}">{{$jur->name}}</option>
                                     @endforeach
                                 </select>
-                                <div class="alert-error text-danger">
-                                    @foreach ($errors->get('jurusan_id') as $err)
-                                        {{ $err }}
-                                    @endforeach
-                                </div>
+                                @error('jurusan_id')<div class="alert-error text-danger">{{$message}}</div>@enderror
                             </div>
                         </div>
                         <hr class="mt-2 mb-4">

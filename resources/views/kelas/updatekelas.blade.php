@@ -18,13 +18,9 @@
                             <div class="col-lg-3 col-md-2 ">
                                 <label class="mt-2 me-5 label-input">Nama Kelas</label>
                             </div>
-                            <div class="col-lg-8 col-md-9 col-12">
+                            <div class="col-lg-8 col-md-9 col-12 h-10">
                                 <input autocomplete="off" value="{{$kelas->name}}" name="name" type="text" class="form-control text-gray @error('name') is-invalid @enderror">
-                                <div class="alert-error text-danger">
-                                    @foreach ($errors->get('name') as $err)
-                                        {{ $err }}
-                                    @endforeach
-                                </div>
+                                @error('name')<div class="alert-error text-danger">{{$message}}</div>@enderror
                             </div>
                         </div>
                         <hr class="mt-2 mb-4">
