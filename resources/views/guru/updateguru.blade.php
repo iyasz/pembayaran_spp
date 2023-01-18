@@ -10,7 +10,7 @@
             <div class="h-100 main">
                 <form action="/guru/update/{{$guru->id}}" method="POST">
                     @csrf
-                    <h4 class="mb-4">Update Guru Room's</h4>
+                    <h4 class="my-4">Update Guru Room's</h4>
                     <div class="card">
                         <div class="card-body">
                             <div class="row justify-content-center mt-2 ">

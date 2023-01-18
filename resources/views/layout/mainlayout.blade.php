@@ -43,7 +43,31 @@
 <body id="body-pd">
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="header_img"></div>
+
+        {{-- <div class="dropdown ">
+            <a class="btn btn-secondary dropdown-toggle" href="/admin" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="header_img" src="/assets/img/arisu.JPG" alt="">
+                <i class='bx bxs-user-circle'></i>
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div> --}}
+
+        <div class="header_img">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                <img class="img_primary" src="/assets/img/arisu.jpg" alt="">
+            </button>
+            <ul class="dropdown-menu">
+                <li class="text-center"><img class="img_profil" src="/assets/img/arisu.jpg" alt=""></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Profil <i class='bx bx-chevron-right'></i></a></li>
+                <li><a class="dropdown-item" href="#">Setting <i class='bx bx-chevron-right'></i></a></li>
+              </ul>
+        </div>
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">

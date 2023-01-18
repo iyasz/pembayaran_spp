@@ -10,7 +10,7 @@
             <div class="h-100 main">
                 <form action="/transaksi/store" method="POST">
                     @csrf
-                    <h4 class="mb-4">Create Transaksi Room's</h4>
+                    <h4 class="my-4">Create Transaksi Room's</h4>
                     <div class="card">
                         <div class="card-body">
                             <div class="row justify-content-center mt-2 ">

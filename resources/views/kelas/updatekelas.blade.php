@@ -11,7 +11,7 @@
             <form action="/kelas/{{$kelas->id}}" method="POST">
                 @csrf
                 @method('put')
-                <h4 class="mb-4">Update Class Room's</h4>
+                <h4 class="my-4">Update Class Room's</h4>
                 <div class="card">
                     <div class="card-body">
                         <div class="row justify-content-center mt-2 ">

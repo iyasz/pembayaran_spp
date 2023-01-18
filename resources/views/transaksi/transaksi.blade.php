@@ -39,7 +39,7 @@
         <div class="col-12">
             <div class="h-100 main">
                 <div class="row">
-                    <h4 class="mb-5">Transaksi Room's</h4>
+                    <h4 class="mb-5 mt-4">Transaksi Room's</h4>
                     <div class="col-12 text-end">
                         <a href="/transaksi/create" class="btn btn-primary btn-add mb-3 "><i class='bx bx-plus'></i> Add
                             Transaksi</a>

@@ -9,7 +9,7 @@
         <div class="col-12">
             <div class="h-100 main">
                 <div class="d-flex">
-                    <h4 class="mb-4">Jurusan Details : {{ $jurusan->name }}</h4>
+                    <h4 class="my-4">Jurusan Details : {{ $jurusan->name }}</h4>
                     <a href="/jurusan" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
                 </div>
                 <div class="card mb-5">

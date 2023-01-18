@@ -11,7 +11,8 @@
   --icon-color: #c0e1f7;
   --icon-color-hover: #63a1fe;
   --primary-top: #63a1fe;
-  --white-color: #000;
+  --white-color: #fff;
+  --black-color: #000;
   --red-color: #000;
   --red-color-hover: #fe6363;
   /* f6f9fb */
@@ -49,11 +50,13 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  background-color: transparent;
-  /* background-color: var(--white-color); */
+  /* background-color: transparent; */
+  background-color: var(--white-color);
   z-index: var(--z-fixed);
   transition: 0.5s;
+  box-shadow: 0 -24px 34px -1px;
 }
+
 .header_toggle {
   color: var(--icon-color-hover);
   font-size: 1.5rem;
@@ -62,16 +65,30 @@ a {
   right: 10px;
 }
 .header_img {
-  width: 35px;
+  width: 36px;
   height: 35px;
   display: flex;
   justify-content: center;
   border-radius: 50%;
   overflow: hidden;
 }
-.header_img img {
-  width: 40px;
+
+/* .header_img img {
+  width: 35px;
+} */
+
+.img_primary {
+  width: 100% !important;
+  width: max-content;
+  object-fit: fill !important;
+
 }
+
+.img_profil {
+  width: 50px !important;
+  border-radius: 50%;
+}
+
 .l-navbar {
   position: fixed;
   top: 0;
@@ -79,7 +96,7 @@ a {
   width: var(--nav-width);
   height: 100vh;
   /* background-color: var(--first-color); */
-  background-color: #fff;
+  background-color: var(--white-color);
   padding: 0.5rem 1rem 0 0;
   transition: 0.5s;
   z-index: var(--z-fixed);
@@ -118,7 +135,7 @@ a {
   transition: 0.3s;
 }
 .nav_link:hover {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 
 .nav_link:hover .nav_icon {
@@ -144,7 +161,7 @@ a {
   background-color: var(--bg-primary);
 }
 .active {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 
 .active-icon {
@@ -209,11 +226,11 @@ a {
 }
 
 .nav-bot {
-  color: var(--white-color) ;
+  color: var(--black-color) ;
 }
 
 .name-bot {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 
 .hr-nav {

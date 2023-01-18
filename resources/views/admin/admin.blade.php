@@ -48,8 +48,8 @@
     <div class="row">
         <div class="col-12">
             <div class="h-100 main">
-                <div class="row">
-                    <h4 class="mb-5">Admin Room's</h4>
+                <div class="row ">
+                    <h4 class="mb-5 mt-4">Admin Room's</h4>
                     <div class="col-12 text-end">
                         <a href="/admin/create" class="btn btn-primary btn-add mb-3 "><i class='bx bx-plus'></i> Add Admin</a>
                     </div>

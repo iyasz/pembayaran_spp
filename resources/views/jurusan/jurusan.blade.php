@@ -50,7 +50,7 @@
         <div class="col-12">
             <div class="h-100 main">
                 <div class="row">
-                    <h4 class="mb-5">Jurusan Room's</h4>
+                    <h4 class="mb-5 mt-4">Jurusan Room's</h4>
                     <div class="col-12 text-end">
                         <a href="/jurusan/create" class="btn btn-primary btn-add mb-3 "><i class='bx bx-plus'></i> Add Jurusan</a>
                     </div>

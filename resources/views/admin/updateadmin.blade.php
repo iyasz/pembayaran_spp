@@ -11,7 +11,7 @@
                 <form action="/admin/{{$admin->id}}" method="POST">
                     @method('put')
                     @csrf
-                    <h4 class="mb-4">Update Admin Room's</h4>
+                    <h4 class="my-4">Update Admin Room's</h4>
                     <div class="card">
                         <div class="card-body">
                             <div class="row justify-content-center mt-2 ">
