@@ -36,8 +36,9 @@ class adminController extends Controller
         return view('admin.updateadmin', ['admin' => $admin]);
     }
 
-    function update($id, Request $request){
+    function update($id, createAdminRequest $request){
         $admin = admin::find($id);
+        // $rules = admin::$rules;
         $admin->update($request->except('_token', 'addAdmin'));
         return redirect('/admin')->with('updateSuccess', 'data');
     }

@@ -26,10 +26,13 @@ class createAdminRequest extends FormRequest
         return [
             'name' => ['required', 'max:100'],
             'username' => ['required', 'unique:admins', 'max:100'],
-            'email' => ['required', 'unique:admins', 'max:100'],
+            // 'username' => ['required', 'unique:admins,username' . $admin->id, 'max:100'],
+            // 'username' => 'required|max:100|unique:admins,username' . '$admin->id',
+            'username' => 'required|max:100|unique:admins,username,' . $this->id,
+            'email' => ['required', 'unique:admins,email,'. $this->id, 'max:100'],
             'password' => ['required', 'max:100'],
             'gender' => ['required', 'in:M,W'],
-            'telp' => ['required', 'unique:admins', 'digits_between:0,20', 'numeric'],
+            'telp' => ['required', 'unique:admins,telp,' . $this->id, 'digits_between:6,15', 'numeric'],
             'alamat' => ['required', 'max:150'],
         ];
     }
@@ -49,7 +52,7 @@ class createAdminRequest extends FormRequest
             'username.max' => "Panjang Username Maximal :max Character!",
             'email.max' => "Panjang Email Maximal :max Character!",
             'password.max' => "Panjang Password Maximal :max Character!",
-            'telp.digits_between' => "Panjang Telepon Maximal 20!",
+            'telp.digits_between' => "Telepon Terlalu Panjang/Pendek!",
             'alamat.max' => "Panjang Alamat Maximal :max Character!",
             
             'username.unique' => "Username Telah Digunakan!",

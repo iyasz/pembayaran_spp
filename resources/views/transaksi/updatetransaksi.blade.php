@@ -122,16 +122,7 @@
                                 </div>
                             </div>
                             <hr class="mt-4 mb-4">
-                            <div class="row justify-content-center mt-2 ">
-                                <div class="col-lg-3 col-md-2 ">
-                                    <label class="mt-2 me-5 label-input">Updated At</label>
-                                </div>
-                                <div class="col-lg-8 col-md-9 col-12">
-                                    <input type="datetime-local" name="updated_at" class="form-control text-gray">
-                                    <input type="hidden" name="created_at" value="">
-                                </div>
-                            </div>
-                            <hr class="mt-4 mb-4">
+
                         </div>
                     </div>
                     <div class="mt-4 mb-5 text-end">
