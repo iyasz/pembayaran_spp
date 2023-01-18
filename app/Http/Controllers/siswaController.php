@@ -51,11 +51,25 @@ class siswaController extends Controller
         return view('siswa.updatesiswa',['siswa' => $siswa, 'kelas' => $kelas, 'jurusan' => $jurusan]);
     }
 
-    public function update($id, Request $request)
+    public function update($id, siswaPostRequest $request)
     {
         $find = siswa::find($id);
-        $find->update($request->except('_token','updateStudent'));
-        return redirect('/siswa')->with('updateSuccess', 'data');
+        $kelas = kelas::find($request->kelas_id);
+        $jurusan = jurusan::find($request->jurusan_id);
+
+        if($kelas == TRUE && $jurusan == TRUE){
+            // $find->update([
+            //     'name' => $request->name,
+            //     'alamat' => $request->alamat,
+            //     'kelas_id' => $request->kelas_id,
+            //     'jurusan_id' => $request->jurusan_id,
+            // ]);
+           $find->update($request->except('_token','updateStudent'));
+             return redirect('/siswa')->with('updateSuccess', 'data');
+        }else{
+            return redirect('/siswa')->with('failed', 'data');
+        }
+
     }
 
     public function detail($id)
