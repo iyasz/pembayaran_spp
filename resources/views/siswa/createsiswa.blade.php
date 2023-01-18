@@ -43,7 +43,7 @@
                             <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
-                                    <label class="mt-2 me-5 label-input">Telpon</label>
+                                    <label class="mt-2 me-5 label-input">Telepon</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
                                     <input autocomplete="off" name="telp" value="{{old('telp')}}" type="number" class="form-control text-gray @error('telp') is-invalid @enderror">

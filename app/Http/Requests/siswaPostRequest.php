@@ -25,8 +25,8 @@ class siswaPostRequest extends FormRequest
     {
         return [
             'name' => ['required', 'max:150'],
-            'nis' => ['required', 'numeric',  'digits_between:6,10'],
-            'telp' => ['required', 'numeric', 'digits_between:6,15'],
+            'nis' => ['required', 'numeric',  'digits_between:6,10', 'unique:siswa,nis,' . $this->id],
+            'telp' => ['required', 'numeric', 'digits_between:6,15', 'unique:siswa,telp,' . $this->id],
             'alamat' => ['required', 'max:500'],
             'kelas_id' => ['required'],
             'jurusan_id' => ['required'],
@@ -49,8 +49,8 @@ class siswaPostRequest extends FormRequest
             'nis.numeric' => 'Nis Harus Berupa Number!',
             'telp.numeric' => 'Telepon Harus Berupa Number!',
 
-            // 'nis.unique' => 'Nis Sudah Terdaftar!',
-            // 'telp.unique' => 'Telepon Sudah Terdaftar!',
+            'nis.unique' => 'Nis Sudah Terdaftar!',
+            'telp.unique' => 'Telepon Sudah Terdaftar!',
             
             'nis.digits_between' => 'Nis Terlalu Panjang/Pendek!',
             'telp.digits_between' => 'Telepon Terlalu Panjang/Pendek!',
