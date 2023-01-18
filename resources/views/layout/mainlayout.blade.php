@@ -64,8 +64,8 @@
             <ul class="dropdown-menu">
                 <li class="text-center"><img class="img_profil" src="/assets/img/arisu.jpg" alt=""></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Profil <i class='bx bx-chevron-right'></i></a></li>
-                <li><a class="dropdown-item" href="#">Setting <i class='bx bx-chevron-right'></i></a></li>
+                <li><a class="dropdown-item text-gray" href="#">Profil <i class='bx bx-chevron-right '></i></a></li>
+                <li><a class="dropdown-item text-gray" href="#">Setting <i class='bx bx-chevron-right'></i></a></li>
               </ul>
         </div>
     </header>

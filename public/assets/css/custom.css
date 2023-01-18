@@ -78,9 +78,13 @@ a {
 } */
 
 .img_primary {
-  width: 100% !important;
-  width: max-content;
-  object-fit: fill !important;
+  display: flex;
+  justify-content: center;
+  width: 46px !important;
+  height: 45px;
+  position: relative;
+  top: -10px;
+  border-radius: 50%;
 
 }
 
@@ -396,12 +400,15 @@ a {
   font-size: 12px !important;
 }
 
+.h-10 {
+  height: 53px !important;
+}
+
 .status-benar {
   background-color: #6fd57d !important;
   color: #12501b !important;
 
 }
-
 
 .status-salah {
   background-color:#ca6363 !important ;
@@ -412,7 +419,6 @@ a {
 .status-pending {
   background-color:#cac163 !important ;
   color: #504f12 !important;
-  
 }
 
 /* end content */
