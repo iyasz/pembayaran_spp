@@ -20,6 +20,19 @@ class kelasController extends Controller
 
     public function store(Request $request)
     {
+        $rules = [
+            'name' => 'required|max:3|unique:kelas',
+        ];
+
+        $messages = [
+            'name.required' => 'Nama Harus Diisi!',
+            'name.max' => 'Nama Terlalu Panjang!',
+            'name.unique' => 'Nama Sudah Terdaftar!',
+        ];
+
+        $validate = $request->validate($rules, $messages);
+
+
         kelas::create($request->except('_token','addClass'));
         return redirect('/kelas')->with('createSuccess', 'data');
     }
@@ -33,6 +46,19 @@ class kelasController extends Controller
     public function update($id, Request $request)
     {
         $kelas = kelas::find($id);
+ 
+        $rules = [
+            'name' => 'required|max:3|unique:kelas',
+        ];
+
+        $messages = [
+            'name.required' => 'Nama Harus Diisi!',
+            'name.max' => 'Nama Terlalu Panjang!',
+            'name.unique' => 'Nama Sudah Terdaftar!',
+        ];
+        
+        $validate = $request->validate($rules, $messages);
+    
         $kelas->update($request->except('_token','addClass'));
         return redirect('/kelas')->with('updateSuccess', 'data');
     }

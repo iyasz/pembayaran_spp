@@ -18,6 +18,19 @@ class jurusanController extends Controller
     }
 
     function store(Request $request){
+
+        $rules = [
+            'name' => 'required|max:150|unique:kelas',
+        ];
+
+        $messages = [
+            'name.required' => 'Nama Harus Diisi!',
+            'name.max' => 'Nama Terlalu Panjang!',
+            'name.unique' => 'Nama Sudah Terdaftar!',
+        ];
+
+        $validate = $request->validate($rules, $messages);
+
         jurusan::create($request->except('_token','addJurusan'));
         return redirect('/jurusan')->with('createSuccess', 'data');
     }
@@ -28,6 +41,19 @@ class jurusanController extends Controller
     }
 
     function update($id, Request $request){
+
+        $rules = [
+            'name' => 'required|max:150|unique:kelas',
+        ];
+
+        $messages = [
+            'name.required' => 'Nama Harus Diisi!',
+            'name.max' => 'Nama Terlalu Panjang!',
+            'name.unique' => 'Nama Sudah Terdaftar!',
+        ];
+
+        $validate = $request->validate($rules, $messages);
+
         $find = jurusan::find($id);
         $find->update($request->except('_token','addJurusan'));
         return redirect('/jurusan')->with('updateSuccess', 'data');

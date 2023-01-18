@@ -11,4 +11,5 @@ class kelas extends Model
 
     protected $table = "kelas";
     protected $guarded = [];
+    public $timestamps = false;
 }

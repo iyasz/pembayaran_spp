@@ -18,20 +18,15 @@
                                     <label class="mt-2 me-5 label-input">Nama Jurusan</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12">
-                                    <input autocomplete="off" name="name" type="text" class="form-control text-gray">
+                                    <input autocomplete="off" name="name" type="text" class="form-control text-gray @error('name') is-invalid @enderror">
+                                    <div class="alert-error text-danger ">
+                                        @foreach ($errors->get('name') as $err)
+                                            {{ $err }}
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
-                            <hr class="mt-4 mb-4">
-                            <div class="row justify-content-center mt-2 ">
-                                <div class="col-lg-3 col-md-2 ">
-                                    <label class="mt-2 me-5 label-input">Created At</label>
-                                </div>
-                                <div class="col-lg-8 col-md-9 col-12">
-                                    <input type="datetime-local" name="created_at" class="form-control text-gray">
-                                    <input type="hidden" name="updated_at" value="">
-                                </div>
-                            </div>
-                            <hr class="mt-4 mb-4">
+                            <hr class="mt-2 mb-4">
                         </div>
                     </div>
                     <div class="mt-4 mb-5 text-end">
