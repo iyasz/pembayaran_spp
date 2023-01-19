@@ -37,7 +37,7 @@
                             <td>{{ $data->jurusan['name'] }}</td>
                             <td class="d-flex">
                                 <a href="/siswa/detail/{{ $data->id }}"><i class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
-                                <a href="/siswa/update/{{$data->id}}"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
+                                <a href="/siswa/restore/{{$data->id}}"><i class='bx bx-plus-circle fs-5 mx-1 text-gray'></i></a>
                             </td>
                         </tr>
                     @endforeach
