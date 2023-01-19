@@ -64,15 +64,15 @@
             <ul class="dropdown-menu">
                 <li class="text-center"><img class="img_profil" src="/assets/img/arisu.jpg" alt=""></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item text-gray" href="#">Profil <i class='bx bx-chevron-right '></i></a></li>
+                <li><a class="dropdown-item text-gray" href="#">Profil <i class='bx bx-chevron-right'></i></a></li>
                 <li><a class="dropdown-item text-gray" href="#">Setting <i class='bx bx-chevron-right'></i></a></li>
               </ul>
         </div>
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
-            <div> <a href="" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
-                        class="nav_logo-name">I'M !</span> </a>
+            <div> <a href="/" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
+                        class="nav_logo-name"><img src="/assets/img/logo.png" width="110px" alt=""></span> </a>
                 <div class="nav_list">
                     <a href="/" class="nav_link @yield('dsh')"> <i
                             class='bx bx-bar-chart-alt-2 @yield('icdsh') nav_icon'></i> <span

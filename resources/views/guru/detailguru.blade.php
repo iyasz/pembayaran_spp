@@ -10,7 +10,7 @@
             <div class="h-100 main">
                 <div class="d-flex">
                     <h4 class="my-4">Guru Details : {{ $guru->name }}</h4>
-                    <a href="/guru/" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
+                    <a href="/guru/" class="ms-auto mt-4 fs-3"><i class='bx bxs-chevron-left'></i></a>
                 </div>
                 <div class="card">
                     <div class="card-body">

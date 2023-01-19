@@ -28,6 +28,8 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\createAdminRequest' => $baseDir . '/app/Http/Requests/createAdminRequest.php',
     'App\\Http\\Requests\\guruPostRequest' => $baseDir . '/app/Http/Requests/guruPostRequest.php',
+    'App\\Http\\Requests\\siswaPostRequest' => $baseDir . '/app/Http/Requests/siswaPostRequest.php',
+    'App\\Http\\Requests\\trxPostRequest' => $baseDir . '/app/Http/Requests/trxPostRequest.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\admin' => $baseDir . '/app/Models/admin.php',
     'App\\Models\\guru' => $baseDir . '/app/Models/guru.php',

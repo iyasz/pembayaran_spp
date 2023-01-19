@@ -12,7 +12,7 @@ class siswaController extends Controller
 {
     public function index()
     {
-        $siswa = siswa::all();
+        $siswa = siswa::get();
         return view('siswa.siswa', ['siswa' => $siswa]);
     }
 

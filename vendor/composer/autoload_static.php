@@ -552,6 +552,8 @@ class ComposerStaticInitb474b789daf85e5b6bde6e8456c79d9c
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\createAdminRequest' => __DIR__ . '/../..' . '/app/Http/Requests/createAdminRequest.php',
         'App\\Http\\Requests\\guruPostRequest' => __DIR__ . '/../..' . '/app/Http/Requests/guruPostRequest.php',
+        'App\\Http\\Requests\\siswaPostRequest' => __DIR__ . '/../..' . '/app/Http/Requests/siswaPostRequest.php',
+        'App\\Http\\Requests\\trxPostRequest' => __DIR__ . '/../..' . '/app/Http/Requests/trxPostRequest.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\admin' => __DIR__ . '/../..' . '/app/Models/admin.php',
         'App\\Models\\guru' => __DIR__ . '/../..' . '/app/Models/guru.php',

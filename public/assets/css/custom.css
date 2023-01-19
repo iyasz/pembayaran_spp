@@ -9,7 +9,7 @@
   --first-color: #4723d9;
   --first-color-light: #afa5d9;
   --icon-color: #c0e1f7;
-  --icon-color-hover: #63a1fe;
+  /* --icon-color-hover: #63a1fe; */
   --primary-top: #63a1fe;
   --white-color: #fff;
   --black-color: #000;
@@ -58,7 +58,7 @@ a {
 }
 
 .header_toggle {
-  color: var(--icon-color-hover);
+  color: var(--primary-top);
   font-size: 1.5rem;
   cursor: pointer;
   position: relative;
@@ -124,9 +124,11 @@ a {
   margin-bottom: 2rem;
 }
 .nav_logo-icon {
-  font-size: 1.25rem;
-  color: var(--primary-top);
+  /* font-size: 1.25rem;
+  color: var(--primary-top); */
   visibility: hidden;
+  poin
+  cursor: -moz-grab !important;
 }
 .nav_logo-name {
   color: var(--primary-top);
@@ -143,7 +145,7 @@ a {
 }
 
 .nav_link:hover .nav_icon {
-  color: var(--icon-color-hover);
+  color: var(--primary-top);
 }
 
 .nav_link:hover .icon-bot {
@@ -169,7 +171,7 @@ a {
 }
 
 .active-icon {
-  color: var(--icon-color-hover);
+  color: var(--primary-top);
 }
 
 .active::before {

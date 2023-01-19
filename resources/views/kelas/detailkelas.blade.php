@@ -10,7 +10,7 @@
             <div class="h-100 main">
                 <div class="d-flex">
                     <h4 class="my-4">Class Details : {{ $kelas->name }}</h4>
-                    <a href="/kelas" class="ms-auto  fs-3"><i class='bx bxs-chevron-left'></i></a>
+                    <a href="/kelas" class="ms-auto mt-4 fs-3"><i class='bx bxs-chevron-left'></i></a>
                 </div>
                 <div class="card">
                     <div class="card-body">
