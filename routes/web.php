@@ -82,6 +82,8 @@ Route::post('/siswa/store',[siswaController::class, 'store']);
 
 Route::delete('/siswa/{id}',[siswaController::class, 'destroy']);
 
+Route::get('/siswa/deleted/',[siswaController::class, 'restoreview']);
+
 // end siswa 
 
 // Route kelas 

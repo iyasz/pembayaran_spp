@@ -78,4 +78,10 @@ class siswaController extends Controller
         return view('siswa.detailsiswa', ['siswa' => $find]);
     }
 
+    public function restoreview()
+    {
+        $siswa = siswa::onlyTrashed();
+        return view('siswa.restore', ['siswa' => $siswa]);
+    }
+
 }
