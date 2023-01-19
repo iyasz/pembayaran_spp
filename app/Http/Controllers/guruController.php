@@ -33,9 +33,9 @@ class guruController extends Controller
 
         if($find == TRUE AND $find2 == TRUE){
             guru::create($request->except('_token', 'addGuru'));
-            return redirect('/guru')->with('createSuccess', 'data');
+            return redirect('/guru')->with('success', 'Data Berhasil Disimpan!');
         }else{
-            return redirect('/guru')->with('createFailed', 'Failed');
+            return redirect('/guru')->with('failed', 'Data Gagal Disimpan!');
         }
      
     }
@@ -44,7 +44,7 @@ class guruController extends Controller
     {
         $find = guru::find($id);
         $find->delete();
-        return redirect('/guru')->with('deleteSuccess', 'data');
+        return redirect('/guru')->with('success', 'Data Berhasil Dihapus!');
     }
 
     public function detail($id)
@@ -65,6 +65,6 @@ class guruController extends Controller
     {
         $guru = guru::find($id);
         $guru->update($request->except('_token', 'updateGuru'));
-        return redirect('/guru')->with('updateSuccess', 'Data');
+        return redirect('/guru')->with('success', 'Data Berhasil Diubah!');
     }
 }

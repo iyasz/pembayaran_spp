@@ -30,9 +30,9 @@ class siswaController extends Controller
 
         if($kelas == TRUE && $jurusan == TRUE){
             siswa::create($request->except('_token','addStudent'));
-            return redirect('/siswa')->with('createSuccess', 'data');
+            return redirect('/siswa')->with('success', 'Data Berhasil Disimpan!');
         }else{
-            return redirect('/siswa')->with('failed', 'data');
+            return redirect('/siswa')->with('failed', 'Data Gagal Disimpan!');
         }
     }
 
@@ -40,7 +40,7 @@ class siswaController extends Controller
     {
         $find = siswa::find($id);
         $find->delete();
-        return redirect('/siswa')->with('deleteSuccess', 'data');
+        return redirect('/siswa')->with('success', 'Data Berhasil Dihapus!');
     }
 
     public function updateview($id)
@@ -58,23 +58,16 @@ class siswaController extends Controller
         $jurusan = jurusan::find($request->jurusan_id);
 
         if($kelas == TRUE && $jurusan == TRUE){
-            // $find->update([
-            //     'name' => $request->name,
-            //     'alamat' => $request->alamat,
-            //     'kelas_id' => $request->kelas_id,
-            //     'jurusan_id' => $request->jurusan_id,
-            // ]);
            $find->update($request->except('_token','updateStudent'));
-             return redirect('/siswa')->with('updateSuccess', 'data');
+             return redirect('/siswa')->with('success', 'Data Berhasil Diubah!');
         }else{
-            return redirect('/siswa')->with('failed', 'data');
+            return redirect('/siswa')->with('failed', 'Data Gagal Diubah!');
         }
-
     }
 
     public function detail($id)
     {
-        $find = siswa::find($id);
+        $find = siswa::withTrashed()->find($id);
         return view('siswa.detailsiswa', ['siswa' => $find]);
     }
 

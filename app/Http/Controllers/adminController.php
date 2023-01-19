@@ -24,11 +24,9 @@ class adminController extends Controller
     }
 
     function store(createAdminRequest $request){
-
         // $request["created_at"] = Carbon::now()->format("Y-m-d H:i:s");
-
         admin::create($request->except('_token', 'addAdmin'));
-        return redirect('/admin')->with('createSuccess', 'Data');
+        return redirect('/admin')->with('success', 'Data Berhasil Disimpan!');
     }
 
     function updateview($id){
@@ -40,13 +38,13 @@ class adminController extends Controller
         $admin = admin::find($id);
         // $rules = admin::$rules;
         $admin->update($request->except('_token', 'addAdmin'));
-        return redirect('/admin')->with('updateSuccess', 'data');
+        return redirect('/admin')->with('success', 'Data Berhasil Diubah!');
     }
 
     function destroy($id){
         $admin = admin::find($id);
         $admin->delete();
-        return redirect('/admin')->with('deleteSuccess', 'data');
+        return redirect('/admin')->with('success', 'Data Berhasil Dihapus!');
     }
 
 }

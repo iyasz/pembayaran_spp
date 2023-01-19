@@ -29,9 +29,9 @@ class transaksiController extends Controller
 
         if($siswa == TRUE){
             transaksi::create($req->except('_token', 'add'));
-            return redirect('/transaksi')->with('createSuccess', 'data');
+            return redirect('/transaksi')->with('success', 'Data Berhasil Disimpan!');
         }else{
-            return redirect('/transaksi')->with('createFailed', 'Failed');
+            return redirect('/transaksi')->with('failed', 'Data Gagal Disimpan!');
         }
 
     }
@@ -63,6 +63,6 @@ class transaksiController extends Controller
             'note' => $req->note,
         ]);
 
-        return redirect('/transaksi')->with('updateSuccess', 'Data');
+        return redirect('/transaksi')->with('success', 'Data Berhasil Diubah!');
     }
 }

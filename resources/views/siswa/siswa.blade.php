@@ -6,11 +6,11 @@
 
 @section('content')
 
-@if (SESSION('createSuccess'))
+@if (SESSION('success'))
 <script>
     iziToast.show({
         icon: "fa-regular fa-circle-check",
-        message: "Data Berhasil Disimpan!",
+        message: "{{SESSION('success')}}",
         position: "topCenter",
         drag: false,
         pauseOnHover: false,
@@ -19,38 +19,11 @@
         timeout: 4100,
       });</script>
 @endif
-@if (SESSION('updateSuccess'))
-<script>
-    iziToast.show({
-        icon: "fa-regular fa-circle-check",
-        message: "Data Berhasil Diubah!",
-        position: "topCenter",
-        drag: false,
-        pauseOnHover: false,
-        color: "green",
-        iconUrl: null,
-        timeout: 4100,
-      });</script>
-@endif
-@if (SESSION('deleteSuccess'))
-<script>
-    iziToast.show({
-        icon: "fa-regular fa-circle-check",
-        message: "Data Berhasil Dihapus!",
-        position: "topCenter",
-        drag: false,
-        pauseOnHover: false,
-        color: "green",
-        iconUrl: null,
-        timeout: 4100,
-      });</script>
-@endif
-
 @if (SESSION('failed'))
 <script>
     iziToast.show({
         icon: "fa-solid fa-xmark",
-        message: "Data Gagal Disimpan!",
+        message: "{{SESSION('failed')}}",
         position: "topCenter",
         drag: false,
         pauseOnHover: false,
