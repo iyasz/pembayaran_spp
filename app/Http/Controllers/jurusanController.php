@@ -32,7 +32,7 @@ class jurusanController extends Controller
         $validate = $request->validate($rules, $messages);
 
         jurusan::create($request->except('_token','addJurusan'));
-        return redirect('/jurusan')->with('createSuccess', 'data');
+        return redirect('/jurusan')->with('success', 'Data Berhasil Disimpan!');
     }
 
     function updateview($id){
@@ -56,13 +56,13 @@ class jurusanController extends Controller
 
         $find = jurusan::find($id);
         $find->update($request->except('_token','addJurusan'));
-        return redirect('/jurusan')->with('updateSuccess', 'data');
+        return redirect('/jurusan')->with('success', 'Data Berhasil Dihapus!');
     }
 
     function destroy($id){
         $find = jurusan::find($id);
         $find->delete();
-        return redirect('/jurusan')->with('deleteSuccess', 'data');
+        return redirect('/jurusan')->with('success', 'Data Berhasil Dihapus!');
     }
 
     function detail($id){

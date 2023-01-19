@@ -34,7 +34,7 @@ class kelasController extends Controller
 
 
         kelas::create($request->except('_token','addClass'));
-        return redirect('/kelas')->with('createSuccess', 'data');
+        return redirect('/kelas')->with('success', 'Data Berhasil Disimpan!');
     }
 
     public function updateview($id)
@@ -60,14 +60,14 @@ class kelasController extends Controller
         $validate = $request->validate($rules, $messages);
     
         $kelas->update($request->except('_token','addClass'));
-        return redirect('/kelas')->with('updateSuccess', 'data');
+        return redirect('/kelas')->with('success', 'Data Berhasil Diubah!');
     }
 
     public function destroy($id)
     {
         $kelas = kelas::find($id);
         $kelas->delete();
-        return redirect('/kelas')->with('deleteSuccess', 'data');
+        return redirect('/kelas')->with('success', 'Data Berhasil Dihapus');
     }
 
     public function detail($id)
