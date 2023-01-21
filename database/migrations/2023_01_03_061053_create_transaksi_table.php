@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('transaksi', function (Blueprint $table) {
             $table->id();
-            $table->string('no_transaksi', '7');
+            $table->string('no_transaksi', '35');
             $table->string('admin', '200');
             $table->string('cara_bayar', '20');
             $table->dateTime('tgl_transaksi', $precision = 0);

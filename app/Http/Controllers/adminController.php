@@ -25,6 +25,7 @@ class adminController extends Controller
 
     function store(createAdminRequest $request){
         // $request["created_at"] = Carbon::now()->format("Y-m-d H:i:s");
+        $request->file('img_profil')->store('admin-profil');
         admin::create($request->except('_token', 'addAdmin'));
         return redirect('/admin')->with('success', 'Data Berhasil Disimpan!');
     }

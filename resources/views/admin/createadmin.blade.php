@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-12">
             <div class="h-100 main">
-                <form action="/admin/store" method="POST">
+                <form action="/admin/store" method="POST" enctype="multipart/form-data">
                     @csrf
                     <h4 class="my-4">Create Admin Room's</h4>
                     <div class="card">
@@ -80,6 +80,17 @@
                                     <input autocomplete="off" value="{{old('telp')}}" name="telp" type="number"
                                         class="form-control text-gray @error('telp') is-invalid @enderror" maxlength="20">
                                         @error('telp') <div class="alert-error text-danger">{{$message}}</div> @enderror
+                                </div>
+                            </div>
+                            <hr class="mt-2 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Photo Profil</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12 h-10">
+                                    <input autocomplete="off" value="{{old('img_profil')}}" name="img_profil" type="file"
+                                        class="form-control text-gray @error('img_profil') is-invalid @enderror">
+                                        @error('img_profil') <div class="alert-error text-danger">{{$message}}</div> @enderror
                                 </div>
                             </div>
                             <hr class="mt-2 mb-4">

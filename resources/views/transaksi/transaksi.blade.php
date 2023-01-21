@@ -70,7 +70,7 @@
                                             <a class="" href="/transaksi/update/{{ $data->id }}"><i
                                                     class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
                                                     @else
-                                                    <p>---</p>
+                                                    <p class="mb-0">---</p> 
                                                     @endif
                                             </div>
                                     </td>
