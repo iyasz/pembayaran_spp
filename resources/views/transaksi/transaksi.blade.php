@@ -63,15 +63,11 @@
                                     <td>{{ $data->no_transaksi }}</td>
                                     <td>{{ $data->siswa['name'] }}</td>
                                     <td class=""><div class="@if($data->status == 'S')status status-benar @elseif( $data->status == 'P')status status-pending @else status status-salah @endif"> @if($data->status == 'S') Success @elseif( $data->status == 'P') Pending @else Canceled @endif</div> </td>
-                                    <td class="d-flex">
+                                    <td class="d-flex ">
                                         <a href="/transaksi/detail/{{ $data->id }}"><i
                                                 class='bx bx-info-circle fs-5 mx-1 text-gray'></i></a>
                                         <div class=""> @if($data->status == "P")                      
-                                            <a class="" href="/transaksi/update/{{ $data->id }}"><i
-                                                    class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a>
-                                                    @else
-                                                    <p class="mb-0">---</p> 
-                                                    @endif
+                                            <a class="" href="/transaksi/update/{{ $data->id }}"><i class='bx bx-edit-alt fs-5 mx-1 text-gray'></i></a> @else <span class="">---</span> @endif
                                             </div>
                                     </td>
                                 </tr>

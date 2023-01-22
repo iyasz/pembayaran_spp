@@ -27,21 +27,12 @@ class transaksiController extends Controller
     {
         $siswa = siswa::find($req->siswa_id);
 
-        $transaki = 'TRX/PAYMENT-SPP/'.now()->timestamp.random_int(100,999);
+        $transaki = 'TRX/PAYMENT-SPP/'.date('Ymd').random_int(10000,99999);
 
         if($siswa == TRUE){
-            transaksi::create([
-                'no_transaksi' => $transaki,
-                'admin_id' => $req->admin_id,
-                'siswa_id' => $req->siswa_id,
-                'cara_bayar' => $req->cara_bayar,
-                'tgl_transaksi' => $req->tgl_transaksi,
-                'total' => $req->total,
-                'status' => $req->status,
-                'note' => $req->note,
-            ]);
+            $req['no_transaksi'] = $transaki;
 
-            // transaksi::create($req->except('_token', 'add'));
+            transaksi::create($req->except('_token', 'add'));
             return redirect('/transaksi')->with('success', 'Data Berhasil Disimpan!');
         }else{
             return redirect('/transaksi')->with('failed', 'Data Gagal Disimpan!');

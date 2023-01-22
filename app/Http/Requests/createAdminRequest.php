@@ -26,8 +26,6 @@ class createAdminRequest extends FormRequest
         return [
             'name' => ['required', 'max:100'],
             'username' => ['required', 'unique:admins', 'max:100'],
-            // 'username' => ['required', 'unique:admins,username' . $admin->id, 'max:100'],
-            // 'username' => 'required|max:100|unique:admins,username' . '$admin->id',
             'username' => 'required|max:100|unique:admins,username,' . $this->id,
             'email' => ['required', 'unique:admins,email,'. $this->id, 'max:100'],
             'password' => ['required', 'max:100'],
