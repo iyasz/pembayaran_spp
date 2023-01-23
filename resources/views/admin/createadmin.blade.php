@@ -88,9 +88,9 @@
                                     <label class="mt-2 me-5 label-input">Photo Profil</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12 h-10">
-                                    <input autocomplete="off" value="{{old('img_profil')}}" name="img_profil" type="file"
-                                        class="form-control text-gray @error('img_profil') is-invalid @enderror">
-                                        @error('img_profil') <div class="alert-error text-danger">{{$message}}</div> @enderror
+                                    <input autocomplete="off" name="photo" value="" type="file"
+                                        class="form-control text-gray @error('photo') is-invalid @enderror">
+                                        @error('photo') <div class="alert-error text-danger">{{$message}}</div> @enderror
                                 </div>
                             </div>
                             <hr class="mt-2 mb-4">
