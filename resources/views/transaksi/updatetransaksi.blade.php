@@ -15,12 +15,11 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row justify-content-center mt-2 ">
-                                <input autocomplete="off" value="{{$trx->no_transaksi}}" name="no_transaksi" type="hidden">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Admin</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12 h-10">
-                                    <input autocomplete="off" name="admin_id" value="{{$trx->admin_id}}" type="text" class="form-control text-gray @error('admin_id') is-invalid @enderror">
+                                    <input autocomplete="off" disabled name="admin_id" value="{{$trx->admin_id}}" type="text" class="form-control text-gray @error('admin_id') is-invalid @enderror">
                                 </div>
                             </div>
                             <hr class="mt-2 mb-4">
@@ -65,7 +64,7 @@
                                     <label class="mt-2 me-5 label-input">Senilai</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12 h-10">
-                                    <input disabled name="total" value="{{ $trx->total }}"  type="number" class="form-control text-gray @error('total') is-invalid @enderror">
+                                    <input disabled name="total" value="Rp. {{ number_format($trx->total)}}"  type="text" class="form-control text-gray @error('total') is-invalid @enderror">
                                 </div>
                             </div>
                             <hr class="mt-2 mb-4">

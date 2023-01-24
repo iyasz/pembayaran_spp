@@ -27,7 +27,8 @@ class trxPostRequest extends FormRequest
             'siswa_id' => ['required'],
             'cara_bayar' => ['required', 'in:C,T'],
             'tgl_transaksi' => ['required'],
-            'total' => ['required', 'digits_between:4,8', 'numeric'],
+            'total' => ['required'],
+            // , 'digits_between:4,8', 'numeric'
             'bukti' => ['required', 'image','mimes:jpeg,jpg,png'],
             'status' => ['required', 'in:P,C,S'],
         ];

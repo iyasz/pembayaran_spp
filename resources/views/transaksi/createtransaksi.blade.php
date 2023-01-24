@@ -14,7 +14,6 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row justify-content-center mt-2 ">
-                                <input autocomplete="off" value="@php echo Str::upper(Str::random(7)); @endphp" name="no_transaksi" type="hidden">
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Admin</label>
                                 </div>
@@ -68,7 +67,9 @@
                                     <label class="mt-2 me-5 label-input">Senilai</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12 h-10">
-                                    <input autocomplete="off" name="total" value="{{ old('total') }}"  type="number" class="form-control text-gray @error('total') is-invalid @enderror">
+                                    <input autocomplete="off" id="rupiah" value="{{ old('total') }}"  type="currency" class="form-control text-gray @error('total') is-invalid @enderror">
+
+                                    <input autocomplete="off" id="rupiahCalc" name="total" value="{{ old('total') }}"  type="hidden" class="form-control text-gray">
                                     @error('total')<div class="alert-error text-danger">{{$message}}</div>@enderror
                                 </div>
                             </div>
