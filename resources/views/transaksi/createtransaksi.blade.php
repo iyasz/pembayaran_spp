@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-12">
             <div class="h-100 main">
-                <form action="/transaksi/store" method="POST">
+                <form action="/transaksi/store" method="POST" enctype="multipart/form-data">
                     @csrf
                     <h4 class="my-4">Create Transaksi Room's</h4>
                     <div class="card">
@@ -65,11 +65,21 @@
                             <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
-                                    <label class="mt-2 me-5 label-input">Total</label>
+                                    <label class="mt-2 me-5 label-input">Senilai</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12 h-10">
                                     <input autocomplete="off" name="total" value="{{ old('total') }}"  type="number" class="form-control text-gray @error('total') is-invalid @enderror">
                                     @error('total')<div class="alert-error text-danger">{{$message}}</div>@enderror
+                                </div>
+                            </div>
+                            <hr class="mt-2 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Bukti Transaksi</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12 h-10">
+                                    <input autocomplete="off" name="bukti" type="file" class="form-control text-gray @error('bukti') is-invalid @enderror">
+                                    @error('bukti')<div class="alert-error text-danger">{{$message}}</div>@enderror
                                 </div>
                             </div>
                             <hr class="mt-2 mb-4">

@@ -7,6 +7,7 @@ use App\Models\admin;
 use App\Models\siswa;
 use App\Models\transaksi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class transaksiController extends Controller
 {
@@ -27,12 +28,18 @@ class transaksiController extends Controller
     {
         $siswa = siswa::find($req->siswa_id);
 
+        $extension = $req->file('bukti')->getClientOriginalExtension();
+        $buktiTrx = 'PAYMENT'.'-'.date('Ymd').'-'.Str::random(9).'.'.$extension;
+        $req->file('bukti')->storeAs('bukti-trx', $buktiTrx);
+
+        $req['bukti_trx'] = $buktiTrx;
+
         $transaki = 'TRX/PAYMENT-SPP/'.date('Ymd').random_int(10000,99999);
 
         if($siswa == TRUE){
             $req['no_transaksi'] = $transaki;
 
-            transaksi::create($req->except('_token', 'add'));
+            transaksi::create($req->except('_token', 'add', 'bukti'));
             return redirect('/transaksi')->with('success', 'Data Berhasil Disimpan!');
         }else{
             return redirect('/transaksi')->with('failed', 'Data Gagal Disimpan!');

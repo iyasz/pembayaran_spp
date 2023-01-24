@@ -62,7 +62,7 @@
                             <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
-                                    <label class="mt-2 me-5 label-input">Total</label>
+                                    <label class="mt-2 me-5 label-input">Senilai</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12 h-10">
                                     <input disabled name="total" value="{{ $trx->total }}"  type="number" class="form-control text-gray @error('total') is-invalid @enderror">
