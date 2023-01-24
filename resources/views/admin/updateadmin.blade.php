@@ -80,6 +80,21 @@
                             <hr class="mt-2 mb-4">
                             <div class="row justify-content-center mt-2 ">
                                 <div class="col-lg-3 col-md-2 ">
+                                    <label class="mt-2 me-5 label-input">Photo Profil</label>
+                                </div>
+                                <div class="col-lg-8 col-md-9 col-12 ">
+                                    {{-- @if(@isset($request->photo))<div class=""> <img width="150px" src=" {{asset('storage/admin-profil/'.$request->photo)}} " alt=""></div> @endif --}}
+
+                                    <label class="mt-2 me-5 label-input"> @if(@isset($admin->img_profil)) <img width="150px" src=" {{asset('storage/admin-profil/'.$admin->img_profil)}} " alt=""> @else Tidak Ada @endif</label>
+
+                                    {{-- <input autocomplete="off" name="photo" value="" type="file"
+                                        class="form-control text-gray @error('photo') is-invalid @enderror">
+                                        @error('photo') <div class="alert-error text-danger">{{$message}}</div> @enderror --}}
+                                </div>
+                            </div>
+                            <hr class="mt-4 mb-4">
+                            <div class="row justify-content-center mt-2 ">
+                                <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Alamat</label>
                                 </div>
                                 <div class="col-lg-8 col-md-9 col-12 h-10">

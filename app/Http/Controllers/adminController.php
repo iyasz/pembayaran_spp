@@ -48,8 +48,18 @@ class adminController extends Controller
 
     function update($id, createAdminRequest $request){
         $admin = admin::find($id);
+        // $imageContent = '';
+
+        // if($request->file('photo')){
+        //     $extension = $request->file('photo')->getClientOriginalExtension();
+        //     $imageContent = $request->username.'-'.date('Ymd').random_int(100,999).'.'.$extension;
+        //     $request->file('photo')->storeAs('admin-profil', $imageContent);
+        // }
+         
+        // $request['img_profil'] = $imageContent;
+
         // $rules = admin::$rules;
-        $admin->update($request->except('_token', 'addAdmin'));
+        $admin->update($request->except('_token', 'addAdmin', 'img_profil'));
         return redirect('/admin')->with('success', 'Data Berhasil Diubah!');
     }
 
