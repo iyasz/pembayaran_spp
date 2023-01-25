@@ -87,11 +87,15 @@
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Photo Profil</label>
                                 </div>
-                                <div class="col-lg-8 col-md-9 col-12 h-10">
-                                    @if(@isset($request->photo))<div class=""> <img width="150px" src=" {{asset('storage/admin-profil/'.$request->photo)}} " alt=""></div> @endif
-                                    <input autocomplete="off" name="photo" value="" type="file"
-                                        class="form-control text-gray @error('photo') is-invalid @enderror">
-                                        @error('photo') <div class="alert-error text-danger">{{$message}}</div> @enderror
+                                <div style="height: 160px;" class="col-lg-8 col-md-9 col-12">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-md-6 col-10">
+                                            <input name="photo" type="file" class="dropify" data-height="130" data-allowed-file-extensions="jpeg jpg png" />
+                                            @error('photo') <div class="alert-error text-danger">{{$message}}</div> @enderror
+                                        </div>
+                                    </div>
+                                    {{-- <input autocomplete="off" name="photo" value="" type="file"
+                                        class="form-control text-gray @error('photo') is-invalid @enderror"> --}}
                                 </div>
                             </div>
                             <hr class="mt-2 mb-4">

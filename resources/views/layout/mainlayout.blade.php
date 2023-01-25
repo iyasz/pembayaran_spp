@@ -33,6 +33,12 @@
     {{-- izitoast --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css">
 
+    {{-- Dropify  --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css">
+    {{-- <link rel="stylesheet" type="text/css" href="https://jeremyfagis.github.io/dropify/dist/css/dropify.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://jeremyfagis.github.io/dropify/dist/js/dropify.min.js"></script> --}}
+
     <!-- css style  -->
     <link rel="stylesheet" href="/assets/css/custom.css">
 
@@ -137,12 +143,14 @@
     {{-- chart js  --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    
     <!-- datatables -->
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.12.1/datatables.min.js"></script>
-
-
-
+    
     <script src="/assets/js/main.js"></script>
+    
+    {{-- dropify  --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
 </body>
 
 </html>

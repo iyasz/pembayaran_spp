@@ -11,9 +11,22 @@ $(document).ready(function () {
         }
     });
 });
-
 // chart js
 
+// dropify
+
+$(document).ready(function() {
+    $('.dropify').dropify({
+        messages: {
+            'default': '',
+            'replace': '',
+            'remove':  'X',
+            'error':   'Upload Failed'
+        }
+    });
+});
+
+// End dropify 
 
 const ctx = document.getElementById("myChart");
 const plugin = {

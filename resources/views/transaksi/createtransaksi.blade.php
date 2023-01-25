@@ -78,9 +78,15 @@
                                 <div class="col-lg-3 col-md-2 ">
                                     <label class="mt-2 me-5 label-input">Bukti Transaksi</label>
                                 </div>
-                                <div class="col-lg-8 col-md-9 col-12 h-10">
-                                    <input autocomplete="off" name="bukti" type="file" class="form-control text-gray @error('bukti') is-invalid @enderror">
-                                    @error('bukti')<div class="alert-error text-danger">{{$message}}</div>@enderror
+                                <div style="height: 160px;" class="col-lg-8 col-md-9 col-12">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-md-6 col-10">
+                                            <input name="bukti" type="file" class="dropify" data-height="130" data-allowed-file-extensions="jpeg jpg png" />
+                                            @error('bukti')<div class="alert-error text-danger">{{$message}}</div>@enderror
+                                        </div>
+                                    </div>
+
+                                    {{-- <input autocomplete="off" name="bukti" type="file" class="form-control text-gray @error('bukti') is-invalid @enderror"> --}}
                                 </div>
                             </div>
                             <hr class="mt-2 mb-4">
