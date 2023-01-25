@@ -26,7 +26,7 @@ Route::get('/', function () {
 
 // auth Route 
 
-Route::get('/login', [loginController::class, 'index']);
+Route::get('/auth/login', [loginController::class, 'index']);
 
 // End Auth 
 

@@ -23,6 +23,14 @@
     <!-- boxicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
+    {{-- bootstrap icon  --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    {{-- roboto font  --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
     {{-- tailwind css  --}}
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
@@ -33,6 +41,16 @@
 </head>
 <body>
     
+    <div class="text-center content-header">
+        <div class="wrap-logo">
+            <img src="/assets/img/logo.png" class="logo-header" width="125px" alt="">
+        </div>
+        {{-- <div class="content-border d-flex">
+            <div class="border1 mt-2"></div>
+            <div class="border2 mt-2 ms-1"></div>
+        </div> --}}
+        {{-- <p>konto</p> --}}
+    </div>
     <!--Container Main start-->
 
     <div class="container">
@@ -40,7 +58,6 @@
     </div>
 
     <!--Container Main end-->
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -54,7 +71,7 @@
         integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    {{-- <script src="/assets/js/main.js"></script> --}}
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>
