@@ -109,7 +109,7 @@
             <div class=" mt-0 position-relative">
                 {{-- <a href="" class="nav_link mb-2"><i class='bx bx-cog nav_icon'></i> <span
                         class="nav_name">Settings</span></a> --}}
-                <a href="logout.php" class="nav_link "><i class='bx bx-log-out nav_icon icon-bot'></i> <span
+                <a href="/logout" class="nav_link "><i class='bx bx-log-out nav_icon icon-bot'></i> <span
                         class="nav_name name-bot">Log Out</span> </a>
             </div>
         </nav>

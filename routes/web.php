@@ -22,15 +22,17 @@ use Illuminate\Support\Facades\Route;
 
 // auth Route 
 
-Route::get('/auth/login', [loginController::class, 'index'])->name('login');
+Route::get('/auth/login', [loginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/auth//login', [loginController::class, 'authlogin'])->middleware('guest');
+Route::get('/logout', [loginController::class, 'logout']);
 
 // End Auth 
 
 
-Route::group (['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth']], function () {
     Route::get('/', function () {
         return view('dashboard');
-    });
+    })->name('dashboard');
     
     // admin route 
     
