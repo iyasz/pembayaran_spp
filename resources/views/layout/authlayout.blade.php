@@ -43,7 +43,7 @@
     
     <div class="text-center content-header">
         <div class="wrap-logo">
-            <img src="/assets/img/logo.png" class="logo-header" width="125px" alt="">
+            <img src="/assets/img/logo.png" class="logo-header" width="120px" alt="">
         </div>
         {{-- <div class="content-border d-flex">
             <div class="border1 mt-2"></div>
